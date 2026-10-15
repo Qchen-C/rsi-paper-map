@@ -41,6 +41,7 @@ export interface ReadingPathData {
   titleZh: string;
   descriptionEn: string;
   descriptionZh: string;
+  targetLength?: number;
   paperIds: readonly string[];
 }
 
@@ -129,6 +130,9 @@ function parseReadingPath(input: unknown): ParseResult<ReadingPathData> {
   const issues: ValidationIssue[] = [];
   for (const field of ['id', 'titleEn', 'titleZh', 'descriptionEn', 'descriptionZh'] as const) {
     push(issues, field, isNonEmptyString(input[field]), `${field} is required`);
+  }
+  if (input.targetLength !== undefined) {
+    push(issues, 'targetLength', Number.isInteger(input.targetLength) && Number(input.targetLength) > 0, 'targetLength must be a positive integer');
   }
   push(issues, 'paperIds', Array.isArray(input.paperIds) && input.paperIds.length > 0 && input.paperIds.every(isNonEmptyString), 'paperIds must contain at least one paper');
   return issues.length > 0

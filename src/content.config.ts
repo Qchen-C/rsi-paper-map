@@ -83,6 +83,7 @@ export const astroReadingPathSchema = z.object({
   titleZh: z.string().min(1),
   descriptionEn: z.string().min(1),
   descriptionZh: z.string().min(1),
+  targetLength: z.number().int().positive().optional(),
   paperIds: z.array(z.string().min(1)).min(1),
 });
 

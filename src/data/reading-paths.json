@@ -1,0 +1,43 @@
+[
+  {
+    "id": "entry",
+    "titleEn": "10-paper entry path",
+    "titleZh": "10 篇入门路线",
+    "descriptionEn": "Start with concrete loops, memory, failure analysis, and automated post-training.",
+    "descriptionZh": "从具体闭环、记忆、失败分析和自动化后训练切入 RSI。",
+    "targetLength": 10,
+    "paperIds": ["agent0", "contextual-drag", "agentic-memory-designs", "posttrainbench"]
+  },
+  {
+    "id": "agent-evolution",
+    "titleEn": "Agent self-evolution",
+    "titleZh": "Agent 自我进化路线",
+    "descriptionEn": "How agents generate tasks, use tools, modify workflows, and automate training.",
+    "descriptionZh": "理解代理如何生成任务、使用工具、修改工作流并自动化训练。",
+    "paperIds": ["agent0", "posttrainbench"]
+  },
+  {
+    "id": "memory-continual-learning",
+    "titleEn": "Memory & continual learning",
+    "titleZh": "记忆与持续学习路线",
+    "descriptionEn": "Designs that retain experience and improve over extended interaction.",
+    "descriptionZh": "研究系统如何保留经验并在长期交互中持续改进。",
+    "paperIds": ["agentic-memory-designs"]
+  },
+  {
+    "id": "self-play-synthetic-data",
+    "titleEn": "Self-play & synthetic data",
+    "titleZh": "自博弈与合成数据路线",
+    "descriptionEn": "Data and curricula generated inside the improvement loop.",
+    "descriptionZh": "学习改进闭环内部如何产生数据与课程。",
+    "paperIds": ["agent0"]
+  },
+  {
+    "id": "safety-failure-modes",
+    "titleEn": "Safety & failure modes",
+    "titleZh": "安全与失败模式路线",
+    "descriptionEn": "When reflection, context, verification, or optimization produces regressions.",
+    "descriptionZh": "分析反思、上下文、验证或优化何时导致系统退化。",
+    "paperIds": ["contextual-drag"]
+  }
+]
