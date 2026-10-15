@@ -1,0 +1,26 @@
+{
+  "name": "rsi-paper-map",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "npm run test:unit",
+    "test:unit": "node --test-isolation=none --test",
+    "test:e2e": "playwright test",
+    "validate:corpus": "node scripts/validate-corpus.mjs",
+    "check:links": "node scripts/check-links.mjs"
+  },
+  "dependencies": {
+    "astro": "7.3.8"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@axe-core/playwright": "4.11.0",
+    "@playwright/test": "1.63.0",
+    "typescript": "6.0.3"
+  }
+}
