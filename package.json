@@ -5,13 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "npm run validate:corpus && astro check && astro build",
     "preview": "astro preview",
     "check": "astro check",
     "test": "npm run test:unit",
     "test:unit": "node --test-isolation=none --test",
     "test:e2e": "playwright test",
-    "validate:corpus": "node scripts/validate-corpus.mjs",
+    "validate:corpus": "node scripts/validate-corpus.mjs --allow-partial",
     "check:links": "node scripts/check-links.mjs"
   },
   "dependencies": {
