@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T06:20:56.241Z",
+  "generatedAt": "2026-10-16T06:28:47.745Z",
   "totalPapers": 110,
   "batchSize": 10,
   "batches": [
@@ -422,70 +422,70 @@
           "title": "Theory-Driven Modeling and LLM-Guided Evolution for Power System Scheduling",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=djdSNvWpJ7",
-          "id": "theory-driven-modeling-and-llm-guided-evolution-for-power-system-scheduling"
+          "id": "power-system-evolution"
         },
         {
           "sourceIndex": 52,
           "title": "Differentiable Evolutionary Reinforcement Learning",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=uXTXcZ615k",
-          "id": "differentiable-evolutionary-reinforcement-learning"
+          "id": "derl"
         },
         {
           "sourceIndex": 53,
           "title": "Your Self-Play Algorithm is Secretly an Adversarial Imitator: Understanding LLM Self-Play through the Lens of Imitation Learning",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=rL0GEyoMvE",
-          "id": "your-self-play-algorithm-is-secretly-an-adversarial-imitator-understanding-llm-self-play-through-the-lens-of-imitation-learning"
+          "id": "self-play-adversarial-imitation"
         },
         {
           "sourceIndex": 54,
           "title": "Unrolled Policy Iteration for Tiny Recursive Models",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=rIzREKws05",
-          "id": "unrolled-policy-iteration-for-tiny-recursive-models"
+          "id": "unrolled-policy-iteration"
         },
         {
           "sourceIndex": 55,
           "title": "Reasoning Cache: Learning to Extrapolate to Long Lengths via Short-Length RL",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=DROMQyqM52",
-          "id": "reasoning-cache-learning-to-extrapolate-to-long-lengths-via-short-length-rl"
+          "id": "reasoning-cache"
         },
         {
           "sourceIndex": 56,
           "title": "ESDAE: Evaluating Synthetic Data for Agent Evaluation",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=DlhLLVhrZB",
-          "id": "esdae-evaluating-synthetic-data-for-agent-evaluation"
+          "id": "esdae"
         },
         {
           "sourceIndex": 57,
           "title": "Actor-Curator: Scalable Policy-driven Curriculum Learning for RL Post-Training",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=JYJXWnujvR",
-          "id": "actor-curator-scalable-policy-driven-curriculum-learning-for-rl-post-training"
+          "id": "actor-curator"
         },
         {
           "sourceIndex": 58,
           "title": "Reward Hacking in Self-Improving Code Agents",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=ikrQWGgxYg",
-          "id": "reward-hacking-in-self-improving-code-agents"
+          "id": "code-agent-reward-hacking"
         },
         {
           "sourceIndex": 59,
           "title": "Constructive Distortion: Improving MLLMs with Attention-Guided Image Warping",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=sSwXGq1RRI",
-          "id": "constructive-distortion-improving-mllms-with-attention-guided-image-warping"
+          "id": "attwarp"
         },
         {
           "sourceIndex": 60,
           "title": "Learning What to Learn: Curriculum Curation for Test-Time Agent Learning",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=TRQLuxgxBN",
-          "id": "learning-what-to-learn-curriculum-curation-for-test-time-agent-learning"
+          "id": "test-time-curriculum-curation"
         }
       ]
     },

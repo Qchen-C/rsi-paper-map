@@ -54,6 +54,16 @@ const SEED_IDS = new Map([
   [48, 'soar'],
   [49, 'evaluating-agents-md'],
   [50, 'compute-as-teacher'],
+  [51, 'power-system-evolution'],
+  [52, 'derl'],
+  [53, 'self-play-adversarial-imitation'],
+  [54, 'unrolled-policy-iteration'],
+  [55, 'reasoning-cache'],
+  [56, 'esdae'],
+  [57, 'actor-curator'],
+  [58, 'code-agent-reward-hacking'],
+  [59, 'attwarp'],
+  [60, 'test-time-curriculum-curation'],
 ]);
 
 function positiveInteger(value, label) {
