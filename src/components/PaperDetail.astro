@@ -1,0 +1,126 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { THEMES } from '../data/themes';
+import { withBase } from '../lib/base-path';
+import ProgressPanel from './ProgressPanel.astro';
+
+type PaperEntry = CollectionEntry<'papers'>;
+
+interface Props {
+  paper: PaperEntry;
+  allPapers: PaperEntry[];
+}
+
+const { paper, allPapers } = Astro.props;
+const data = paper.data;
+const byId = new Map(allPapers.map((entry) => [entry.id, entry]));
+const related = data.relatedPapers.flatMap((id) => byId.has(id) ? [byId.get(id)!] : []);
+const readNext = data.readNext.flatMap((id) => byId.has(id) ? [byId.get(id)!] : []);
+const themes = data.themes.map((id) => THEMES.find((theme) => theme.id === id)).filter(Boolean);
+const evidenceLabel = data.evidenceStatus === 'full-text-checked'
+  ? '全文核对 · Full text checked'
+  : data.evidenceStatus === 'abstract-checked'
+    ? '摘要核对 · Abstract checked'
+    : '元数据 · Metadata only';
+const sourceLabels = { openreview: 'OpenReview', arxiv: 'arXiv', code: 'Code', project: 'Project' } as const;
+const researchSections = [
+  { id: 'problem', title: 'Problem · 问题', en: data.problemEn, zh: data.problemZh },
+  { id: 'method', title: 'Method · 方法', en: data.methodEn, zh: data.methodZh },
+  { id: 'results', title: 'Results · 结果', en: data.resultsEn, zh: data.resultsZh },
+  { id: 'limitations', title: 'Limits · 局限', en: data.limitationsEn, zh: data.limitationsZh },
+  { id: 'why-read', title: 'Why read it · 为什么读', en: data.whyReadEn, zh: data.whyReadZh },
+];
+---
+
+<article class="paper-detail">
+  <header class="paper-detail-header">
+    <nav aria-label="Breadcrumb"><a href={withBase('/papers')}>Papers</a> / {data.presentation} / #{data.sourceIndex}</nav>
+    <div class="detail-heading-grid">
+      <div>
+        <p class="paper-detail-meta">{data.presentation} · {data.difficulty} · {data.year}</p>
+        <h1>{data.title}</h1>
+        <p class="paper-detail-title-zh lang-zh">{data.titleZh}</p>
+      </div>
+      <div class="detail-evidence">
+        <span class:list={['evidence-badge', { verified: data.evidenceStatus === 'full-text-checked' }]}>{evidenceLabel}</span>
+        <small>Verified {data.verifiedAt.toISOString().slice(0, 10)}</small>
+      </div>
+    </div>
+    <p class="paper-detail-authors">{data.authors.join(', ')}</p>
+    <ul class="detail-themes" aria-label="Research themes">
+      {themes.map((theme) => theme && (
+        <li><a href={withBase(`/papers?theme=${theme.id}`)}>{theme.titleEn}<span class="lang-zh"> · {theme.titleZh}</span></a></li>
+      ))}
+    </ul>
+  </header>
+
+  <div class="detail-layout">
+    <div class="detail-main">
+      <section class="research-summary" data-research-section="summary">
+        <div class="lang-en"><p class="section-kicker">English summary</p><p>{data.summaryEn}</p></div>
+        <div class="lang-zh"><p class="section-kicker">中文摘要</p><p>{data.summaryZh}</p></div>
+      </section>
+
+      <section class="improvement-loop" data-improvement-loop aria-labelledby="loop-title">
+        <header>
+          <p class="section-kicker">Improvement loop</p>
+          <h2 id="loop-title">What changes, and why?</h2>
+          <p class="lang-zh">系统改变什么，又根据什么继续迭代？</p>
+        </header>
+        <ol>
+          <li><span>01</span><strong>Feedback source</strong><p>{data.feedbackSource}</p></li>
+          <li><span>02</span><strong>Updated object</strong><p>{data.updatedObject}</p></li>
+          <li><span>03</span><strong>Update mechanism</strong><p>{data.updateMechanism}</p></li>
+          <li><span>04</span><strong>Success signal</strong><p>{data.successSignal}</p></li>
+        </ol>
+        <div class="loop-summary">
+          <p class="lang-en">{data.loopSummaryEn}</p>
+          <p class="lang-zh">{data.loopSummaryZh}</p>
+        </div>
+      </section>
+
+      <div class="research-sections">
+        {researchSections.map((section) => (
+          <section data-research-section={section.id}>
+            <h2>{section.title}</h2>
+            <p class="lang-en">{section.en}</p>
+            <p class="lang-zh">{section.zh}</p>
+          </section>
+        ))}
+      </div>
+    </div>
+
+    <aside class="detail-sidebar">
+      <ProgressPanel paperId={paper.id} />
+
+      <section class="sidebar-block">
+        <h2>Prerequisites · 前置知识</h2>
+        <ul>{data.prerequisites.map((item) => <li data-prerequisite>{item}</li>)}</ul>
+      </section>
+
+      <section class="sidebar-block">
+        <h2>Primary sources · 一手来源</h2>
+        <ul class="source-list">
+          {data.sources.map((source) => (
+            <li><a href={source.url} target="_blank" rel="noreferrer" data-source-link>{sourceLabels[source.kind]}</a></li>
+          ))}
+        </ul>
+        <p class="evidence-sections">Checked sections: {data.checkedSections.length ? data.checkedSections.join(', ') : 'abstract and project materials'}</p>
+      </section>
+
+      {related.length > 0 && (
+        <section class="sidebar-block">
+          <h2>Related papers · 相关论文</h2>
+          <ul>{related.map((entry) => <li><a href={withBase(`/papers/${entry.id}`)} data-related-paper>{entry.data.title}</a></li>)}</ul>
+        </section>
+      )}
+
+      {readNext.length > 0 && (
+        <section class="sidebar-block read-next">
+          <h2>Read next · 接着读</h2>
+          <ol>{readNext.map((entry) => <li><a href={withBase(`/papers/${entry.id}`)} data-read-next>{entry.data.title}</a></li>)}</ol>
+        </section>
+      )}
+    </aside>
+  </div>
+</article>

@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import PaperDetail from '../../components/PaperDetail.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const allPapers = await getCollection('papers');
+  return allPapers.map((paper) => ({
+    params: { id: paper.id },
+    props: { paper, allPapers },
+  }));
+}
+
+interface Props {
+  paper: CollectionEntry<'papers'>;
+  allPapers: CollectionEntry<'papers'>[];
+}
+
+const { paper, allPapers } = Astro.props;
+---
+
+<BaseLayout
+  title={`${paper.data.title} · RSI Paper Map`}
+  description={paper.data.summaryEn}
+>
+  <main id="main-content" class="page-shell paper-detail-page">
+    <PaperDetail paper={paper} allPapers={allPapers} />
+  </main>
+</BaseLayout>

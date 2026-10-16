@@ -1,0 +1,75 @@
+---
+interface Props {
+  paperId: string;
+}
+
+const { paperId } = Astro.props;
+---
+
+<section class="progress-panel" data-progress-panel data-paper-id={paperId} aria-labelledby="progress-title">
+  <header>
+    <p class="section-kicker">Local learning state</p>
+    <h2 id="progress-title">你的学习进度 · Your progress</h2>
+    <p>只保存在这个浏览器，不会进入网站源码或发送到服务器。</p>
+  </header>
+
+  <div class="progress-actions">
+    <button type="button" data-favorite aria-pressed="false">☆ 收藏 · Favorite</button>
+    <label class="read-toggle"><input type="checkbox" data-read /> <span>标记已读 · Mark as read</span></label>
+  </div>
+
+  <label class="progress-range">
+    <span>阅读进度 · Reading progress <output data-progress-output>0%</output></span>
+    <input type="range" min="0" max="100" step="1" value="0" data-progress />
+  </label>
+
+  <label class="note-field">
+    <span>私人笔记 · Private notes</span>
+    <textarea rows="6" data-note placeholder="写下疑问、关联或复现实验计划…"></textarea>
+  </label>
+  <div class="progress-footer">
+    <span data-save-status aria-live="polite">等待本地输入 · Stored locally as you type</span>
+    <button type="button" data-clear-state>清除本页进度 · Clear this paper</button>
+  </div>
+</section>
+
+<script>
+  import { clearReadingState, loadReadingState, saveReadingState } from '../lib/reading-state';
+  import type { ReadingState, ReadingStatePatch } from '../lib/reading-state';
+
+  document.querySelectorAll<HTMLElement>('[data-progress-panel]').forEach((panel) => {
+    const paperId = panel.dataset.paperId;
+    const favorite = panel.querySelector<HTMLButtonElement>('[data-favorite]');
+    const read = panel.querySelector<HTMLInputElement>('[data-read]');
+    const progress = panel.querySelector<HTMLInputElement>('[data-progress]');
+    const output = panel.querySelector<HTMLOutputElement>('[data-progress-output]');
+    const note = panel.querySelector<HTMLTextAreaElement>('[data-note]');
+    const status = panel.querySelector<HTMLElement>('[data-save-status]');
+    if (!paperId || !favorite || !read || !progress || !output || !note || !status) return;
+
+    const render = (state: ReadingState) => {
+      favorite.setAttribute('aria-pressed', String(state.favorite));
+      favorite.textContent = state.favorite ? '★ 已收藏 · Favorite' : '☆ 收藏 · Favorite';
+      read.checked = state.read;
+      progress.value = String(state.progress);
+      output.value = `${Math.round(state.progress)}%`;
+      note.value = state.note;
+    };
+    const save = (patch: ReadingStatePatch) => {
+      const state = saveReadingState(window.localStorage, paperId, patch);
+      render(state);
+      status.textContent = '已保存在本浏览器 · Saved in this browser';
+    };
+
+    render(loadReadingState(window.localStorage, paperId));
+    favorite.addEventListener('click', () => save({ favorite: favorite.getAttribute('aria-pressed') !== 'true' }));
+    read.addEventListener('change', () => save({ read: read.checked }));
+    progress.addEventListener('input', () => save({ progress: Number(progress.value) }));
+    note.addEventListener('input', () => save({ note: note.value }));
+    panel.querySelector('[data-clear-state]')?.addEventListener('click', () => {
+      clearReadingState(window.localStorage, paperId);
+      render(loadReadingState(window.localStorage, paperId));
+      status.textContent = '已清除 · Cleared';
+    });
+  });
+</script>
