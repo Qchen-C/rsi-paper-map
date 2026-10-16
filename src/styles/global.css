@@ -93,7 +93,7 @@ button { font: inherit; }
   align-items: center;
   padding-block: clamp(4.5rem, 10vw, 8.5rem) clamp(4rem, 8vw, 7rem);
 }
-.preview-note, .section-kicker {
+.release-note, .section-kicker {
   margin: 0 0 1.15rem;
   color: var(--signal);
   font: 720 .78rem var(--sans);
