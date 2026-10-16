@@ -62,6 +62,17 @@ describe('validateCorpus', () => {
     assert.ok(issues.some((issue) => issue.code === 'required-paper-missing' && issue.paperId === 'missing-paper'));
     assert.ok(!issues.some((issue) => issue.code === 'evidence-status' && issue.paperId === 'agent0'));
   });
+
+  it('requires every source index in a requested ten-paper batch', () => {
+    const batchEntries = Array.from({ length: 9 }, (_, index) => entry(`paper-${index + 1}`, {
+      title: `Paper ${index + 1}`,
+      sourceIndex: index + 1,
+      readingPaths: [],
+    }));
+    const issues = validateCorpus(batchEntries, { allowPartial: true, batch: 1 });
+    assert.ok(issues.some((issue) => issue.code === 'batch-count'));
+    assert.ok(issues.some((issue) => issue.code === 'batch-missing' && issue.field === 'sourceIndex'));
+  });
 });
 
 describe('checkSource', () => {

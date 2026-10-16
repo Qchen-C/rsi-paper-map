@@ -11,7 +11,7 @@ themes: ["agents-tools-code-evolution", "verification-evaluation-safety"]
 keywords: ["AI R&D automation", "post-training", "LLM agents", "reward hacking", "benchmark"]
 difficulty: "entry"
 prerequisites: ["supervised fine-tuning", "LLM evaluation", "tool-using agents"]
-readingPaths: [{"id":"entry","order":4},{"id":"agent-evolution","order":2}]
+readingPaths: [{"id":"entry","order":7},{"id":"agent-evolution","order":2},{"id":"safety-failure-modes","order":2}]
 relatedPapers: ["agent0", "agentic-memory-designs", "contextual-drag"]
 readNext: []
 featured: true

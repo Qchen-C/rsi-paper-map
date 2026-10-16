@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import manifest from '../../src/data/workshop-papers.json' with { type: 'json' };
-import { buildCorpusBatches, selectCorpusBatch } from '../../scripts/corpus-batch.mjs';
+import { buildCorpusBatches, buildCorpusReview, selectCorpusBatch } from '../../scripts/corpus-batch.mjs';
 
 describe('corpus research batches', () => {
   it('covers the locked manifest exactly once in stable source order', () => {
@@ -26,9 +26,35 @@ describe('corpus research batches', () => {
     assert.deepEqual(packet.requiredChecks, ['introduction', 'method', 'experiments', 'conclusion']);
   });
 
+  it('assigns stable editorial ids to the first review batch', () => {
+    const packet = selectCorpusBatch(manifest, 1, 10);
+    assert.deepEqual(packet.papers.map((paper) => paper.id), [
+      'agent0',
+      'contextual-drag',
+      'agentic-memory-designs',
+      'posttrainbench',
+      'language-self-play',
+      'simplemem',
+      'execution-grounded-ai-research',
+      'parametric-skill-transfer',
+      'scaling-law-discovery',
+      'world-action-verifier',
+    ]);
+  });
+
   it('rejects invalid batch numbers and sizes', () => {
     assert.throws(() => buildCorpusBatches(manifest, 0), /positive integer/);
     assert.throws(() => selectCorpusBatch(manifest, 0, 10), /positive integer/);
     assert.throws(() => selectCorpusBatch(manifest, 12, 10), /does not exist/);
+  });
+
+  it('builds an eleven-batch review ledger with every source index once', () => {
+    const review = buildCorpusReview(manifest, 10, '2026-10-16T00:00:00.000Z');
+    assert.equal(review.batches.length, 11);
+    assert.equal(review.totalPapers, 110);
+    assert.deepEqual(
+      review.batches.flatMap((batch) => batch.papers.map((paper) => paper.sourceIndex)),
+      Array.from({ length: 110 }, (_, index) => index + 1),
+    );
   });
 });

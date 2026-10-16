@@ -1,0 +1,898 @@
+{
+  "generatedAt": "2026-10-16T02:17:16.292Z",
+  "totalPapers": 110,
+  "batchSize": 10,
+  "batches": [
+    {
+      "batch": 1,
+      "requiredChecks": [
+        "introduction",
+        "method",
+        "experiments",
+        "conclusion"
+      ],
+      "papers": [
+        {
+          "sourceIndex": 1,
+          "title": "Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning",
+          "presentation": "oral",
+          "openreviewUrl": "https://openreview.net/forum?id=hYYeOl58xi",
+          "id": "agent0"
+        },
+        {
+          "sourceIndex": 2,
+          "title": "Contextual Drag: How Errors in the Context Affect LLM Reasoning",
+          "presentation": "oral",
+          "openreviewUrl": "https://openreview.net/forum?id=zpiYsPVDlV",
+          "id": "contextual-drag"
+        },
+        {
+          "sourceIndex": 3,
+          "title": "Learning to Continually Learn via Meta-learning Agentic Memory Designs",
+          "presentation": "oral",
+          "openreviewUrl": "https://openreview.net/forum?id=sOq52KnJmR",
+          "id": "agentic-memory-designs"
+        },
+        {
+          "sourceIndex": 4,
+          "title": "PostTrainBench: Can LLM Agents Automate LLM Post-Training?",
+          "presentation": "oral",
+          "openreviewUrl": "https://openreview.net/forum?id=FJKOIxkUxo",
+          "id": "posttrainbench"
+        },
+        {
+          "sourceIndex": 5,
+          "title": "Language Self-Play For Data-Free Training",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=uB8YQHNsh6",
+          "id": "language-self-play"
+        },
+        {
+          "sourceIndex": 6,
+          "title": "SimpleMem: Efficient Lifelong Memory for LLM Agents",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=oYHelQ3Edd",
+          "id": "simplemem"
+        },
+        {
+          "sourceIndex": 7,
+          "title": "Towards Execution-Grounded Automated AI Research",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=gpLJamvbsK",
+          "id": "execution-grounded-ai-research"
+        },
+        {
+          "sourceIndex": 8,
+          "title": "Knowledge is Not Enough: Injecting RL Skills for Continual Adaptation",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=D93migx9av",
+          "id": "parametric-skill-transfer"
+        },
+        {
+          "sourceIndex": 9,
+          "title": "Can Language Models Discover Scaling Laws?",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=Nj6VGY4dej",
+          "id": "scaling-law-discovery"
+        },
+        {
+          "sourceIndex": 10,
+          "title": "Self-Improving World Models via Asymmetric Forward-Inverse Consistency",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=ajcjip0yFR",
+          "id": "world-action-verifier"
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "requiredChecks": [
+        "introduction",
+        "method",
+        "experiments",
+        "conclusion"
+      ],
+      "papers": [
+        {
+          "sourceIndex": 11,
+          "title": "Tiny Autoregressive Recursive Models",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=aY5kmaNrwB",
+          "id": "tiny-autoregressive-recursive-models"
+        },
+        {
+          "sourceIndex": 12,
+          "title": "From Growing to Looping: A Unified View of Iterative Computation in LLMs",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=yIDgVx3OoN",
+          "id": "from-growing-to-looping-a-unified-view-of-iterative-computation-in-llms"
+        },
+        {
+          "sourceIndex": 13,
+          "title": "Lang-PINN: From Language to Physics-Informed Neural Networks via a Multi-Agent Framework",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=q5qN3oQ4D1",
+          "id": "lang-pinn-from-language-to-physics-informed-neural-networks-via-a-multi-agent-framework"
+        },
+        {
+          "sourceIndex": 14,
+          "title": "Presenting a Paper is an Art: Self-Improvement Aesthetic Agents for Academic Presentations",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=d40v7Qcpi4",
+          "id": "presenting-a-paper-is-an-art-self-improvement-aesthetic-agents-for-academic-presentations"
+        },
+        {
+          "sourceIndex": 15,
+          "title": "ACE: Self-Evolving LLM Coding Framework Adversarial Unit Test Generation and Preference Optimization",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=ecKAmz5vlO",
+          "id": "ace-self-evolving-llm-coding-framework-adversarial-unit-test-generation-and-preference-optimization"
+        },
+        {
+          "sourceIndex": 16,
+          "title": "Can Current Language Models Close the Discovery to Application Loop?",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=BAdK20xfqj",
+          "id": "can-current-language-models-close-the-discovery-to-application-loop"
+        },
+        {
+          "sourceIndex": 17,
+          "title": "CausalEvolve: Towards Open-Ended Discovery with Causal Scratchpad",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=14jSctSh0D",
+          "id": "causalevolve-towards-open-ended-discovery-with-causal-scratchpad"
+        },
+        {
+          "sourceIndex": 18,
+          "title": "Self-Improving Vision-Language-Action Models with Data Generation via Residual RL",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=shqo2VPfc7",
+          "id": "self-improving-vision-language-action-models-with-data-generation-via-residual-rl"
+        },
+        {
+          "sourceIndex": 19,
+          "title": "VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=Ro0eQ0ly3q",
+          "id": "vlaw-iterative-co-improvement-of-vision-language-action-policy-and-world-model"
+        },
+        {
+          "sourceIndex": 20,
+          "title": "Test-Time Self-Distillation",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=iEmRSwdzyw",
+          "id": "test-time-self-distillation"
+        }
+      ]
+    },
+    {
+      "batch": 3,
+      "requiredChecks": [
+        "introduction",
+        "method",
+        "experiments",
+        "conclusion"
+      ],
+      "papers": [
+        {
+          "sourceIndex": 21,
+          "title": "Self-Evolving Rubrics: Interpretable Instance-Level Criteria for Scalable RL",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=aA2PXFH2Cp",
+          "id": "self-evolving-rubrics-interpretable-instance-level-criteria-for-scalable-rl"
+        },
+        {
+          "sourceIndex": 22,
+          "title": "Anchored Self-Play for Code Repair",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=lTbBFAoPSA",
+          "id": "anchored-self-play-for-code-repair"
+        },
+        {
+          "sourceIndex": 23,
+          "title": "Interestingness as an Inductive Heuristic for Future Compression Progress",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=6GTlSlWW9C",
+          "id": "interestingness-as-an-inductive-heuristic-for-future-compression-progress"
+        },
+        {
+          "sourceIndex": 24,
+          "title": "GASP: Guided Asymmetric Self-Play For Coding LLMs",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=NYrOkAfDkP",
+          "id": "gasp-guided-asymmetric-self-play-for-coding-llms"
+        },
+        {
+          "sourceIndex": 25,
+          "title": "Adaptive Meta-Curriculum for Test-Time Self-Improvement",
+          "presentation": "spotlight",
+          "openreviewUrl": "https://openreview.net/forum?id=GjoUJTfXiW",
+          "id": "adaptive-meta-curriculum-for-test-time-self-improvement"
+        },
+        {
+          "sourceIndex": 26,
+          "title": "Self-Improving Clinical Reasoning via Textual Gradients",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=VOa0lDJ5Ui",
+          "id": "self-improving-clinical-reasoning-via-textual-gradients"
+        },
+        {
+          "sourceIndex": 27,
+          "title": "Federated Agent Reinforcement Learning",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=h4iPWHGapI",
+          "id": "federated-agent-reinforcement-learning"
+        },
+        {
+          "sourceIndex": 28,
+          "title": "Agent0-VL: Exploring Self-Evolving Agent for Tool-Integrated Vision-Language Reasoning",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=JKx0zkUBsQ",
+          "id": "agent0-vl-exploring-self-evolving-agent-for-tool-integrated-vision-language-reasoning"
+        },
+        {
+          "sourceIndex": 29,
+          "title": "OMEGA: Optimizing Machine learning by Evaluating Generated Algorithms",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=4TUzVEzVdu",
+          "id": "omega-optimizing-machine-learning-by-evaluating-generated-algorithms"
+        },
+        {
+          "sourceIndex": 30,
+          "title": "Intelligent Robot Manipulation Requires Self-Directed Learning",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=hCjgh8jxKl",
+          "id": "intelligent-robot-manipulation-requires-self-directed-learning"
+        }
+      ]
+    },
+    {
+      "batch": 4,
+      "requiredChecks": [
+        "introduction",
+        "method",
+        "experiments",
+        "conclusion"
+      ],
+      "papers": [
+        {
+          "sourceIndex": 31,
+          "title": "Correct Reasoning Paths Visit Shared Decision Pivots",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=OlMSrldTNe",
+          "id": "correct-reasoning-paths-visit-shared-decision-pivots"
+        },
+        {
+          "sourceIndex": 32,
+          "title": "RFTF: Reinforcement Fine-tuning for Vision-language-action Models with Temporal Feedback",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=mBgcG43j7a",
+          "id": "rftf-reinforcement-fine-tuning-for-vision-language-action-models-with-temporal-feedback"
+        },
+        {
+          "sourceIndex": 33,
+          "title": "VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=l5QPYxMEaH",
+          "id": "verltool-towards-holistic-agentic-reinforcement-learning-with-tool-use"
+        },
+        {
+          "sourceIndex": 34,
+          "title": "TangramSR: A Benchmark for Recursive Self-Improvement In Continuous Geometric Reasoning",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=5XGfbXlFmA",
+          "id": "tangramsr-a-benchmark-for-recursive-self-improvement-in-continuous-geometric-reasoning"
+        },
+        {
+          "sourceIndex": 35,
+          "title": "SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=56D2hjARkn",
+          "id": "skillrl-evolving-agents-via-recursive-skill-augmented-reinforcement-learning"
+        },
+        {
+          "sourceIndex": 36,
+          "title": "A Framework for Prompt Optimization and Translation Across Foundation Models",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=gOTCn5uZeE",
+          "id": "a-framework-for-prompt-optimization-and-translation-across-foundation-models"
+        },
+        {
+          "sourceIndex": 37,
+          "title": "Escaping Model Collapse via Synthetic Data Verification: Near-term Improvements and Long-term Convergence",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=YzDC5hjGUM",
+          "id": "escaping-model-collapse-via-synthetic-data-verification-near-term-improvements-and-long-term-convergence"
+        },
+        {
+          "sourceIndex": 38,
+          "title": "LLM-FE: Automated Feature Engineering for Tabular Data with LLMs as Evolutionary Optimizers",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=KbGkWv7VEk",
+          "id": "llm-fe-automated-feature-engineering-for-tabular-data-with-llms-as-evolutionary-optimizers"
+        },
+        {
+          "sourceIndex": 39,
+          "title": "Contrastive Self-Refinement for Low-Cost Adaptation in Real-World Text-to-SQL",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=tgnbgt3Ctr",
+          "id": "contrastive-self-refinement-for-low-cost-adaptation-in-real-world-text-to-sql"
+        },
+        {
+          "sourceIndex": 40,
+          "title": "Simple Baselines are Competitive with Code Evolution",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=QSWFqDcveB",
+          "id": "simple-baselines-are-competitive-with-code-evolution"
+        }
+      ]
+    },
+    {
+      "batch": 5,
+      "requiredChecks": [
+        "introduction",
+        "method",
+        "experiments",
+        "conclusion"
+      ],
+      "papers": [
+        {
+          "sourceIndex": 41,
+          "title": "Rethinking Machine Unlearning: Models Designed to Forget via Key Deletion",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=gGH3Xp1lHR",
+          "id": "rethinking-machine-unlearning-models-designed-to-forget-via-key-deletion"
+        },
+        {
+          "sourceIndex": 42,
+          "title": "Self-CriTeach: LLM Self-Teaching and Self-Critiquing for Improving Robotic Planning via Automated Domain Generation",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=8I0n20ufAy",
+          "id": "self-criteach-llm-self-teaching-and-self-critiquing-for-improving-robotic-planning-via-automated-domain-generation"
+        },
+        {
+          "sourceIndex": 43,
+          "title": "Unlocking Intrinsic Self-Reflection for LLM Preference Policy Optimization",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=0ZGL40jRKE",
+          "id": "unlocking-intrinsic-self-reflection-for-llm-preference-policy-optimization"
+        },
+        {
+          "sourceIndex": 44,
+          "title": "TextBO: Bayesian Optimization in Language Space for Eval-Efficient Self-Improving AI",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=h0XYERyeL6",
+          "id": "textbo-bayesian-optimization-in-language-space-for-eval-efficient-self-improving-ai"
+        },
+        {
+          "sourceIndex": 45,
+          "title": "POLARIS: A GODEL AGENT FRAMEWORK FOR SMALL LANGUAGE MODELS THROUGH EXPERIENCE ABSTRACTED POLICY REPAIR",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=wlwkLVvB0W",
+          "id": "polaris-a-godel-agent-framework-for-small-language-models-through-experience-abstracted-policy-repair"
+        },
+        {
+          "sourceIndex": 46,
+          "title": "Shape of Thought: When Distribution Matters More than Correctness in Reasoning Tasks",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=Oc5R3D2TfE",
+          "id": "shape-of-thought-when-distribution-matters-more-than-correctness-in-reasoning-tasks"
+        },
+        {
+          "sourceIndex": 47,
+          "title": "Reasoning as Gradient: Scaling MLE Agents Beyond Tree Search",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=TnjlvLY30w",
+          "id": "reasoning-as-gradient-scaling-mle-agents-beyond-tree-search"
+        },
+        {
+          "sourceIndex": 48,
+          "title": "Teaching Models to Teach Themselves: Reasoning at the Edge of Learnability",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=HuLoDnvC29",
+          "id": "teaching-models-to-teach-themselves-reasoning-at-the-edge-of-learnability"
+        },
+        {
+          "sourceIndex": 49,
+          "title": "Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=0DyJeJ3iia",
+          "id": "evaluating-agents-md-are-repository-level-context-files-helpful-for-coding-agents"
+        },
+        {
+          "sourceIndex": 50,
+          "title": "Compute as Teacher: Turning Inference Compute Into Reference-Free Supervision",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=WA6q2pNQhj",
+          "id": "compute-as-teacher-turning-inference-compute-into-reference-free-supervision"
+        }
+      ]
+    },
+    {
+      "batch": 6,
+      "requiredChecks": [
+        "introduction",
+        "method",
+        "experiments",
+        "conclusion"
+      ],
+      "papers": [
+        {
+          "sourceIndex": 51,
+          "title": "Theory-Driven Modeling and LLM-Guided Evolution for Power System Scheduling",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=djdSNvWpJ7",
+          "id": "theory-driven-modeling-and-llm-guided-evolution-for-power-system-scheduling"
+        },
+        {
+          "sourceIndex": 52,
+          "title": "Differentiable Evolutionary Reinforcement Learning",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=uXTXcZ615k",
+          "id": "differentiable-evolutionary-reinforcement-learning"
+        },
+        {
+          "sourceIndex": 53,
+          "title": "Your Self-Play Algorithm is Secretly an Adversarial Imitator: Understanding LLM Self-Play through the Lens of Imitation Learning",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=rL0GEyoMvE",
+          "id": "your-self-play-algorithm-is-secretly-an-adversarial-imitator-understanding-llm-self-play-through-the-lens-of-imitation-learning"
+        },
+        {
+          "sourceIndex": 54,
+          "title": "Unrolled Policy Iteration for Tiny Recursive Models",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=rIzREKws05",
+          "id": "unrolled-policy-iteration-for-tiny-recursive-models"
+        },
+        {
+          "sourceIndex": 55,
+          "title": "Reasoning Cache: Learning to Extrapolate to Long Lengths via Short-Length RL",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=DROMQyqM52",
+          "id": "reasoning-cache-learning-to-extrapolate-to-long-lengths-via-short-length-rl"
+        },
+        {
+          "sourceIndex": 56,
+          "title": "ESDAE: Evaluating Synthetic Data for Agent Evaluation",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=DlhLLVhrZB",
+          "id": "esdae-evaluating-synthetic-data-for-agent-evaluation"
+        },
+        {
+          "sourceIndex": 57,
+          "title": "Actor-Curator: Scalable Policy-driven Curriculum Learning for RL Post-Training",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=JYJXWnujvR",
+          "id": "actor-curator-scalable-policy-driven-curriculum-learning-for-rl-post-training"
+        },
+        {
+          "sourceIndex": 58,
+          "title": "Reward Hacking in Self-Improving Code Agents",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=ikrQWGgxYg",
+          "id": "reward-hacking-in-self-improving-code-agents"
+        },
+        {
+          "sourceIndex": 59,
+          "title": "Constructive Distortion: Improving MLLMs with Attention-Guided Image Warping",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=sSwXGq1RRI",
+          "id": "constructive-distortion-improving-mllms-with-attention-guided-image-warping"
+        },
+        {
+          "sourceIndex": 60,
+          "title": "Learning What to Learn: Curriculum Curation for Test-Time Agent Learning",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=TRQLuxgxBN",
+          "id": "learning-what-to-learn-curriculum-curation-for-test-time-agent-learning"
+        }
+      ]
+    },
+    {
+      "batch": 7,
+      "requiredChecks": [
+        "introduction",
+        "method",
+        "experiments",
+        "conclusion"
+      ],
+      "papers": [
+        {
+          "sourceIndex": 61,
+          "title": "Beyond Solving: A Closer Look at LLMs as Solution Verifiers",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=Hv5hDfbhuB",
+          "id": "beyond-solving-a-closer-look-at-llms-as-solution-verifiers"
+        },
+        {
+          "sourceIndex": 62,
+          "title": "Aligned but Stereotypical? Understanding and Mitigating Social Bias in LLM-Driven Text-to-Image Models",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=RvgoRhan6d",
+          "id": "aligned-but-stereotypical-understanding-and-mitigating-social-bias-in-llm-driven-text-to-image-models"
+        },
+        {
+          "sourceIndex": 63,
+          "title": "Do Depth-Grown Models Overcome the Curse of Depth? An In-Depth Analysis",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=Enqas0eZF6",
+          "id": "do-depth-grown-models-overcome-the-curse-of-depth-an-in-depth-analysis"
+        },
+        {
+          "sourceIndex": 64,
+          "title": "CoT-Seg: Rethinking Segmentation with Chain-of-Thought Reasoning and Self-Correction",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=BtHRvwzJj8",
+          "id": "cot-seg-rethinking-segmentation-with-chain-of-thought-reasoning-and-self-correction"
+        },
+        {
+          "sourceIndex": 65,
+          "title": "AlphaApollo: A System for Deep Agentic Reasoning",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=UcIFJPXqrB",
+          "id": "alphaapollo-a-system-for-deep-agentic-reasoning"
+        },
+        {
+          "sourceIndex": 66,
+          "title": "Reasoning Within the Mind: Dynamic Multimodal Interleaving in Latent Space",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=fWrhAOQZ5A",
+          "id": "reasoning-within-the-mind-dynamic-multimodal-interleaving-in-latent-space"
+        },
+        {
+          "sourceIndex": 67,
+          "title": "Leveraging Suboptimal and Noisy Trajectories for Goal-Conditional Offline RL",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=jfi88XbVsn",
+          "id": "leveraging-suboptimal-and-noisy-trajectories-for-goal-conditional-offline-rl"
+        },
+        {
+          "sourceIndex": 68,
+          "title": "AUTOHARNESS: IMPROVING LLM AGENTS BY AUTOMATICALLY SYNTHESIZING A CODE HARNESS",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=g9rEYVNn5T",
+          "id": "autoharness-improving-llm-agents-by-automatically-synthesizing-a-code-harness"
+        },
+        {
+          "sourceIndex": 69,
+          "title": "One-Step Video Depth Estimation via Self-Distillation",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=ucRjPd9HVU",
+          "id": "one-step-video-depth-estimation-via-self-distillation"
+        },
+        {
+          "sourceIndex": 70,
+          "title": "Discover the distinguishing and effective reasoning patterns among LLMs via an LLM",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=z9MOHU8RjL",
+          "id": "discover-the-distinguishing-and-effective-reasoning-patterns-among-llms-via-an-llm"
+        }
+      ]
+    },
+    {
+      "batch": 8,
+      "requiredChecks": [
+        "introduction",
+        "method",
+        "experiments",
+        "conclusion"
+      ],
+      "papers": [
+        {
+          "sourceIndex": 71,
+          "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=f1eKYFvMNu",
+          "id": "agentic-context-engineering-evolving-contexts-for-self-improving-language-models"
+        },
+        {
+          "sourceIndex": 72,
+          "title": "Self-EvolveRec: Self-Evolving Recommender Systems with LLM-based Directional Feedback",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=KCcpSuocz0",
+          "id": "self-evolverec-self-evolving-recommender-systems-with-llm-based-directional-feedback"
+        },
+        {
+          "sourceIndex": 73,
+          "title": "Learning to Evolve: Scaling Open-Ended Discovery with Relative-Progress RL",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=WnZHbe1Gu0",
+          "id": "learning-to-evolve-scaling-open-ended-discovery-with-relative-progress-rl"
+        },
+        {
+          "sourceIndex": 74,
+          "title": "Improved Iterative Refinement for Chart-to-Code Generation via Structured Instruction",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=KgkMSbYoL1",
+          "id": "improved-iterative-refinement-for-chart-to-code-generation-via-structured-instruction"
+        },
+        {
+          "sourceIndex": 75,
+          "title": "Language-Guided Expertise Evolution for Protein Optimization",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=NeNWeyfUJj",
+          "id": "language-guided-expertise-evolution-for-protein-optimization"
+        },
+        {
+          "sourceIndex": 76,
+          "title": "A Task-Centric Theory for Iterative Self-Improvement with Easy-to-Hard Curricula",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=EEc4Pn2GSa",
+          "id": "a-task-centric-theory-for-iterative-self-improvement-with-easy-to-hard-curricula"
+        },
+        {
+          "sourceIndex": 77,
+          "title": "Adaptive Decoding via Test-Time Policy Learning for Self-Improving Generation",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=7fIqKZ92Fy",
+          "id": "adaptive-decoding-via-test-time-policy-learning-for-self-improving-generation"
+        },
+        {
+          "sourceIndex": 78,
+          "title": "Dynamic Noise Preference Optimization: Self-Improvement of Large Language Models with Self-Synthetic Data",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=nT1gTSAf07",
+          "id": "dynamic-noise-preference-optimization-self-improvement-of-large-language-models-with-self-synthetic-data"
+        },
+        {
+          "sourceIndex": 79,
+          "title": "Vision-Guided Iterative Refinement for Frontend Code Generation",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=gF6jmAsbpZ",
+          "id": "vision-guided-iterative-refinement-for-frontend-code-generation"
+        },
+        {
+          "sourceIndex": 80,
+          "title": "MAPPA: Scaling Multiagent Systems with Process Rewards",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=s06wgoO65a",
+          "id": "mappa-scaling-multiagent-systems-with-process-rewards"
+        }
+      ]
+    },
+    {
+      "batch": 9,
+      "requiredChecks": [
+        "introduction",
+        "method",
+        "experiments",
+        "conclusion"
+      ],
+      "papers": [
+        {
+          "sourceIndex": 81,
+          "title": "Residual Off-Policy RL for Finetuning Behavior Cloning Policies",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=9m4kM3bK2b",
+          "id": "residual-off-policy-rl-for-finetuning-behavior-cloning-policies"
+        },
+        {
+          "sourceIndex": 82,
+          "title": "SAGE: Self-play Adversarial Games Enhance Large Language Model Reasoning Capabilities",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=b3dPMokQki",
+          "id": "sage-self-play-adversarial-games-enhance-large-language-model-reasoning-capabilities"
+        },
+        {
+          "sourceIndex": 83,
+          "title": "Soft Mellowmax Monte Carlo Planning",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=SeZCSEGZTq",
+          "id": "soft-mellowmax-monte-carlo-planning"
+        },
+        {
+          "sourceIndex": 84,
+          "title": "Log-Augmented Generation: Scaling Test-Time Reasoning with Reusable Computation",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=32xd2HdB9m",
+          "id": "log-augmented-generation-scaling-test-time-reasoning-with-reusable-computation"
+        },
+        {
+          "sourceIndex": 85,
+          "title": "Self-Improving VLM Judges Without Human Annotations",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=8hYSvUpJBA",
+          "id": "self-improving-vlm-judges-without-human-annotations"
+        },
+        {
+          "sourceIndex": 86,
+          "title": "Duel-Evolve: Pairwise Preference Black-Box Optimization of LLM Responses",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=38t39AFZPE",
+          "id": "duel-evolve-pairwise-preference-black-box-optimization-of-llm-responses"
+        },
+        {
+          "sourceIndex": 87,
+          "title": "MimicAgent: Learning Quadruped Skills via Text-to-Trajectory Generation",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=1iAEFtFQ9M",
+          "id": "mimicagent-learning-quadruped-skills-via-text-to-trajectory-generation"
+        },
+        {
+          "sourceIndex": 88,
+          "title": "Feedback Descent: Open-Ended Text Optimization via Pairwise Comparison",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=A0dlCcZ4hT",
+          "id": "feedback-descent-open-ended-text-optimization-via-pairwise-comparison"
+        },
+        {
+          "sourceIndex": 89,
+          "title": "CircuitBuilder: From Polynomials to Circuits via Reinforcement Learning",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=JNsTWIukjQ",
+          "id": "circuitbuilder-from-polynomials-to-circuits-via-reinforcement-learning"
+        },
+        {
+          "sourceIndex": 90,
+          "title": "Generative Recursive Reasoning Models",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=Vxu6kcIjwV",
+          "id": "generative-recursive-reasoning-models"
+        }
+      ]
+    },
+    {
+      "batch": 10,
+      "requiredChecks": [
+        "introduction",
+        "method",
+        "experiments",
+        "conclusion"
+      ],
+      "papers": [
+        {
+          "sourceIndex": 91,
+          "title": "Emergent temporal abstractions in autoregressive models enable hierarchical reinforcement learning",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=5UbKomO77O",
+          "id": "emergent-temporal-abstractions-in-autoregressive-models-enable-hierarchical-reinforcement-learning"
+        },
+        {
+          "sourceIndex": 92,
+          "title": "Refining Large Language Models with Self-Generated Data Through Iterative Training",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=81P20Qg44P",
+          "id": "refining-large-language-models-with-self-generated-data-through-iterative-training"
+        },
+        {
+          "sourceIndex": 93,
+          "title": "Inference-Time Scaling in Diffusion Models through Iterative Partial Refinement",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=QopjICzGwr",
+          "id": "inference-time-scaling-in-diffusion-models-through-iterative-partial-refinement"
+        },
+        {
+          "sourceIndex": 94,
+          "title": "In-Context Adaptation",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=f58uDOwLaq",
+          "id": "in-context-adaptation"
+        },
+        {
+          "sourceIndex": 95,
+          "title": "SAHOO: Safeguarded Alignment for High-Order Optimization Objectives in Recursive Self-Improvement",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=OAFPpQO0H9",
+          "id": "sahoo-safeguarded-alignment-for-high-order-optimization-objectives-in-recursive-self-improvement"
+        },
+        {
+          "sourceIndex": 96,
+          "title": "Structure Enables Effective Self-Localization of Errors in LLMs",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=QbL99Fyqsl",
+          "id": "structure-enables-effective-self-localization-of-errors-in-llms"
+        },
+        {
+          "sourceIndex": 97,
+          "title": "Self-Improvement via Fast Tree-search",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=wZMNXHPYcO",
+          "id": "self-improvement-via-fast-tree-search"
+        },
+        {
+          "sourceIndex": 98,
+          "title": "Self-Adapting Agents for Automating Research Coding Workflows",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=ihcRmUkXHF",
+          "id": "self-adapting-agents-for-automating-research-coding-workflows"
+        },
+        {
+          "sourceIndex": 99,
+          "title": "Verifying the Verifiers: Failure Attribution for Agentic Benchmark Diagnostics and Training Data Curation",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=iRhaK8PsuB",
+          "id": "verifying-the-verifiers-failure-attribution-for-agentic-benchmark-diagnostics-and-training-data-curation"
+        },
+        {
+          "sourceIndex": 100,
+          "title": "Just Enough Learning: GRPO-Guided Controllers for Hyperparameter Sweeps",
+          "presentation": "poster",
+          "openreviewUrl": "https://openreview.net/forum?id=kKWSQsYgpa",
+          "id": "just-enough-learning-grpo-guided-controllers-for-hyperparameter-sweeps"
+        }
+      ]
+    },
+    {
+      "batch": 11,
+      "requiredChecks": [
+        "introduction",
+        "method",
+        "experiments",
+        "conclusion"
+      ],
+      "papers": [
+        {
+          "sourceIndex": 101,
+          "title": "Real-Time Procedural Learning From Experience for AI Agents",
+          "presentation": "short",
+          "openreviewUrl": "https://openreview.net/forum?id=MKG4BaSieN",
+          "id": "real-time-procedural-learning-from-experience-for-ai-agents"
+        },
+        {
+          "sourceIndex": 102,
+          "title": "Reference-Guided Machine Unlearning",
+          "presentation": "short",
+          "openreviewUrl": "https://openreview.net/forum?id=0IbjWHRGMC",
+          "id": "reference-guided-machine-unlearning"
+        },
+        {
+          "sourceIndex": 103,
+          "title": "Test-Time Adaptation via Many-Shot Prompting: Benefits, Limits, and Pitfalls",
+          "presentation": "short",
+          "openreviewUrl": "https://openreview.net/forum?id=Ne0s3UOzdB",
+          "id": "test-time-adaptation-via-many-shot-prompting-benefits-limits-and-pitfalls"
+        },
+        {
+          "sourceIndex": 104,
+          "title": "Cross-Family Speculative Prefill: Training-Free Long-Context Compression with Small Draft Models",
+          "presentation": "short",
+          "openreviewUrl": "https://openreview.net/forum?id=7dNjMllnWe",
+          "id": "cross-family-speculative-prefill-training-free-long-context-compression-with-small-draft-models"
+        },
+        {
+          "sourceIndex": 105,
+          "title": "Depth vs Recursion: Outperforming Transformers in Jigsaw Reconstruction",
+          "presentation": "short",
+          "openreviewUrl": "https://openreview.net/forum?id=1zDG1o16xB",
+          "id": "depth-vs-recursion-outperforming-transformers-in-jigsaw-reconstruction"
+        },
+        {
+          "sourceIndex": 106,
+          "title": "Test-Time Meta-Adaptation with Self-Synthesis",
+          "presentation": "short",
+          "openreviewUrl": "https://openreview.net/forum?id=G0GE1xbR0w",
+          "id": "test-time-meta-adaptation-with-self-synthesis"
+        },
+        {
+          "sourceIndex": 107,
+          "title": "Federation over Text",
+          "presentation": "short",
+          "openreviewUrl": "https://openreview.net/forum?id=gh7aCT73cq",
+          "id": "federation-over-text"
+        },
+        {
+          "sourceIndex": 108,
+          "title": "TamperBench: A Systematic Framework to Stress-Test LLM Safety Under Fine-Tuning and Tampering",
+          "presentation": "short",
+          "openreviewUrl": "https://openreview.net/forum?id=smLtz7WID0",
+          "id": "tamperbench-a-systematic-framework-to-stress-test-llm-safety-under-fine-tuning-and-tampering"
+        },
+        {
+          "sourceIndex": 109,
+          "title": "Build, Judge, Optimize: A Blueprint for Continuous Improvement of Multi-Agent Consumer Assistants",
+          "presentation": "short",
+          "openreviewUrl": "https://openreview.net/forum?id=FySoHBWmt9",
+          "id": "build-judge-optimize-a-blueprint-for-continuous-improvement-of-multi-agent-consumer-assistants"
+        },
+        {
+          "sourceIndex": 110,
+          "title": "Orthogonal Gradient Projection for Continual LLM Unlearning",
+          "presentation": "short",
+          "openreviewUrl": "https://openreview.net/forum?id=lb6Ce20kl5",
+          "id": "orthogonal-gradient-projection-for-continual-llm-unlearning"
+        }
+      ]
+    }
+  ]
+}

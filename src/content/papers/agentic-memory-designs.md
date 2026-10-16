@@ -11,7 +11,7 @@ themes: ["memory-continual-adaptation", "agents-tools-code-evolution"]
 keywords: ["ALMA", "agentic memory", "meta-learning", "continual learning", "program synthesis"]
 difficulty: "intermediate"
 prerequisites: ["LLM agents", "episodic memory", "retrieval", "meta-learning"]
-readingPaths: [{"id":"entry","order":3},{"id":"memory-continual-learning","order":1}]
+readingPaths: [{"id":"entry","order":4},{"id":"memory-continual-learning","order":2}]
 relatedPapers: ["agent0", "posttrainbench"]
 readNext: ["posttrainbench"]
 featured: true

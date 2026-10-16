@@ -1,5 +1,5 @@
-import { readFile } from 'node:fs/promises';
-import { resolve } from 'node:path';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const REQUIRED_CHECKS = ['introduction', 'method', 'experiments', 'conclusion'];
@@ -8,6 +8,12 @@ const SEED_IDS = new Map([
   [2, 'contextual-drag'],
   [3, 'agentic-memory-designs'],
   [4, 'posttrainbench'],
+  [5, 'language-self-play'],
+  [6, 'simplemem'],
+  [7, 'execution-grounded-ai-research'],
+  [8, 'parametric-skill-transfer'],
+  [9, 'scaling-law-discovery'],
+  [10, 'world-action-verifier'],
 ]);
 
 function positiveInteger(value, label) {
@@ -47,6 +53,16 @@ export function selectCorpusBatch(manifest, batchNumber, batchSize = 10) {
   return selected;
 }
 
+export function buildCorpusReview(manifest, batchSize = 10, generatedAt = new Date().toISOString()) {
+  const batches = buildCorpusBatches(manifest, batchSize);
+  return {
+    generatedAt,
+    totalPapers: manifest.length,
+    batchSize,
+    batches,
+  };
+}
+
 function parseNumberArg(args, name, fallback) {
   const index = args.indexOf(name);
   if (index < 0) return fallback;
@@ -57,9 +73,46 @@ function parseNumberArg(args, name, fallback) {
 async function runCli() {
   const args = process.argv.slice(2);
   const manifest = JSON.parse(await readFile(resolve('src/data/workshop-papers.json'), 'utf8'));
-  const batchNumber = parseNumberArg(args, '--batch', 1);
   const batchSize = parseNumberArg(args, '--size', 10);
-  console.log(JSON.stringify(selectCorpusBatch(manifest, batchNumber, batchSize), null, 2));
+  if (args.includes('--all')) {
+    const review = buildCorpusReview(manifest, batchSize);
+    const outputIndex = args.indexOf('--out');
+    if (outputIndex >= 0) {
+      const outputValue = args[outputIndex + 1];
+      if (!outputValue || outputValue.startsWith('--')) throw new Error('--out needs a file path');
+      const outputPath = resolve(outputValue);
+      await mkdir(dirname(outputPath), { recursive: true });
+      await writeFile(outputPath, `${JSON.stringify(review, null, 2)}\n`, 'utf8');
+      console.log(`Wrote ${review.batches.length} batches for ${review.totalPapers} papers to ${outputValue}`);
+      return;
+    }
+    console.log(JSON.stringify(review, null, 2));
+    return;
+  }
+
+  const batchNumber = parseNumberArg(args, '--batch', 1);
+  const packet = selectCorpusBatch(manifest, batchNumber, batchSize);
+  if (args.includes('--check')) {
+    const { loadPaperEntries, validateCorpus } = await import('./validate-corpus.mjs');
+    const entries = await loadPaperEntries();
+    const issues = validateCorpus(entries, { allowPartial: true, batch: batchNumber });
+    if (issues.length > 0) {
+      for (const current of issues) console.error(`${current.code} [${current.paperId}.${current.field}]: ${current.message}`);
+      process.exitCode = 1;
+      return;
+    }
+    const reviewedIds = new Set(entries.map((entry) => entry.id));
+    const missingIds = packet.papers.map((paper) => paper.id).filter((id) => !reviewedIds.has(id));
+    if (missingIds.length > 0) {
+      console.error(`batch-files [${batchNumber}.id]: Missing paper files: ${missingIds.join(', ')}`);
+      process.exitCode = 1;
+      return;
+    }
+    console.log(`Batch ${batchNumber} checked: ${packet.papers.length} reviewed papers`);
+    return;
+  }
+
+  console.log(JSON.stringify(packet, null, 2));
 }
 
 const currentFile = fileURLToPath(import.meta.url);

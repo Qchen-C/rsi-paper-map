@@ -97,6 +97,25 @@ export function validateCorpus(entries, options = {}) {
     }
   }
 
+  if (options.batch !== undefined) {
+    const start = ((options.batch - 1) * 10) + 1;
+    const end = Math.min(start + 9, 110);
+    const batchEntries = entries.filter((entry) => {
+      const sourceIndex = entry.data?.sourceIndex;
+      return Number.isInteger(sourceIndex) && sourceIndex >= start && sourceIndex <= end;
+    });
+    const expectedBatchCount = end - start + 1;
+    if (batchEntries.length !== expectedBatchCount) {
+      issues.push(issue('batch-count', `batch-${options.batch}`, 'count', `Expected ${expectedBatchCount} papers for source indices ${start}-${end}, received ${batchEntries.length}`));
+    }
+    const presentIndices = new Set(batchEntries.map((entry) => entry.data?.sourceIndex));
+    for (let sourceIndex = start; sourceIndex <= end; sourceIndex += 1) {
+      if (!presentIndices.has(sourceIndex)) {
+        issues.push(issue('batch-missing', `batch-${options.batch}`, 'sourceIndex', `Missing source index ${sourceIndex}`));
+      }
+    }
+  }
+
   return issues;
 }
 
@@ -140,6 +159,12 @@ function hasFlag(args, flag) {
 
 export function parseCliOptions(args) {
   const options = { allowPartial: hasFlag(args, '--allow-partial') };
+  const batchIndex = args.indexOf('--batch');
+  if (batchIndex >= 0) {
+    const batch = Number(args[batchIndex + 1]);
+    if (!Number.isInteger(batch) || batch < 1 || batch > 11) throw new Error('--batch must be an integer from 1 to 11');
+    options.batch = batch;
+  }
   const statusIndex = args.indexOf('--require-status');
   if (statusIndex >= 0) {
     const requiredStatus = args[statusIndex + 1];
