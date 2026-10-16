@@ -1,0 +1,36 @@
+---
+import { THEMES } from '../data/themes';
+import { withBase } from '../lib/base-path';
+import type { PaperIndexItem } from '../lib/papers';
+
+interface Props {
+  paper: PaperIndexItem;
+}
+
+const { paper } = Astro.props;
+const evidence = paper.evidenceStatus === 'full-text-checked'
+  ? '全文核对 · Full text checked'
+  : paper.evidenceStatus === 'abstract-checked'
+    ? '摘要核对 · Abstract checked'
+    : '元数据 · Metadata';
+const themeTitles = paper.themes.map((id) => THEMES.find((theme) => theme.id === id)?.titleEn ?? id);
+---
+
+<article class="paper-card" data-paper-card data-paper-id={paper.id}>
+  <div class="paper-number">{String(paper.sourceIndex).padStart(3, '0')}</div>
+  <div class="paper-card-main">
+    <p class="paper-card-meta">{paper.presentation} · {paper.difficulty}</p>
+    <h2><a href={withBase(`/papers/${paper.id}`)} data-paper-title>{paper.title}</a></h2>
+    <p class="lang-zh paper-title-zh">{paper.titleZh}</p>
+    <p class="lang-en paper-summary">{paper.summaryEn}</p>
+    <p class="lang-zh paper-summary">{paper.summaryZh}</p>
+    <p class="paper-authors">{paper.authors.join(', ')}</p>
+    <ul class="paper-tags" aria-label="Research themes">
+      {themeTitles.map((title) => <li>{title}</li>)}
+    </ul>
+  </div>
+  <div class="paper-card-status">
+    <span class:list={['evidence-badge', { verified: paper.evidenceStatus === 'full-text-checked' }]}>{evidence}</span>
+    <small>核对日期 · {paper.verifiedAt}</small>
+  </div>
+</article>

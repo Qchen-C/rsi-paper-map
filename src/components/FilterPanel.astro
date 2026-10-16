@@ -1,0 +1,76 @@
+---
+import type { Theme } from '../data/themes';
+
+interface Props {
+  themes: readonly Theme[];
+}
+
+const { themes } = Astro.props;
+---
+
+<form class="filter-panel" data-filter-form role="search">
+  <div class="filter-toolbar">
+    <label class="search-field">
+      <span>搜索论文 · Search papers</span>
+      <input
+        type="search"
+        name="query"
+        autocomplete="off"
+        placeholder="Title, author, method, task / 标题、作者、方法、任务"
+      />
+    </label>
+    <label class="sort-field">
+      <span>排序 · Sort</span>
+      <select name="sort">
+        <option value="recommended">推荐优先 · Recommended</option>
+        <option value="title">英文标题 · Title</option>
+        <option value="presentation">展示类型 · Presentation</option>
+        <option value="verified">最近核对 · Recently verified</option>
+      </select>
+    </label>
+    <button type="button" class="clear-filters" data-clear-filters>全部清除 · Clear all</button>
+  </div>
+
+  <div class="filter-groups">
+    <fieldset>
+      <legend>研究主题 · Theme</legend>
+      <div class="filter-options theme-options">
+        {themes.map((theme) => (
+          <label>
+            <input type="checkbox" name="themes" value={theme.id} />
+            <span>{theme.titleEn}</span>
+            <small class="lang-zh">{theme.titleZh}</small>
+          </label>
+        ))}
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>证据等级 · Evidence</legend>
+      <div class="filter-options">
+        <label><input type="checkbox" name="evidence" value="full-text-checked" /><span>Full text checked</span><small>全文核对</small></label>
+        <label><input type="checkbox" name="evidence" value="abstract-checked" /><span>Abstract checked</span><small>摘要核对</small></label>
+        <label><input type="checkbox" name="evidence" value="metadata" /><span>Metadata</span><small>元数据</small></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>难度 · Difficulty</legend>
+      <div class="filter-options">
+        <label><input type="checkbox" name="difficulty" value="entry" /><span>Entry</span><small>入门</small></label>
+        <label><input type="checkbox" name="difficulty" value="intermediate" /><span>Intermediate</span><small>进阶</small></label>
+        <label><input type="checkbox" name="difficulty" value="advanced" /><span>Advanced</span><small>深入</small></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>展示类型 · Presentation</legend>
+      <div class="filter-options">
+        <label><input type="checkbox" name="presentations" value="oral" /><span>Oral</span><small>口头报告</small></label>
+        <label><input type="checkbox" name="presentations" value="spotlight" /><span>Spotlight</span><small>亮点报告</small></label>
+        <label><input type="checkbox" name="presentations" value="poster" /><span>Poster</span><small>海报</small></label>
+        <label><input type="checkbox" name="presentations" value="short" /><span>Short</span><small>短文</small></label>
+      </div>
+    </fieldset>
+  </div>
+</form>

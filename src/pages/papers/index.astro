@@ -1,0 +1,109 @@
+---
+import { getCollection } from 'astro:content';
+import FilterPanel from '../../components/FilterPanel.astro';
+import PaperCard from '../../components/PaperCard.astro';
+import { THEMES } from '../../data/themes';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { filterPapers, sortPapers } from '../../lib/filter-papers';
+import { toPaperIndexItem } from '../../lib/papers';
+
+const paperEntries = await getCollection('papers');
+const papers = sortPapers(
+  paperEntries.map((entry) => toPaperIndexItem(entry as unknown as { id: string; data: Record<string, unknown> })),
+  'recommended',
+);
+const serializedPapers = JSON.stringify(papers).replace(/</g, '\\u003c');
+---
+
+<BaseLayout
+  title="Papers · RSI Paper Map"
+  description="Search and filter bilingual research cards for recursive self-improvement papers."
+>
+  <main id="main-content" class="library-page page-shell">
+    <header class="library-heading">
+      <div>
+        <p class="section-kicker">Paper library</p>
+        <h1>Search the ideas, not just the titles.</h1>
+        <p class="lang-zh">按英文标题、中文解释、作者、方法和主题检索。当前为四篇种子研究卡预览，完整目录含 110 篇论文。</p>
+        <p class="lang-en">Search original titles, bilingual explanations, authors, methods, and themes. Four seed cards are available in this preview.</p>
+      </div>
+      <p class="library-index-note"><strong>{papers.length}</strong> / 110<br />research cards</p>
+    </header>
+
+    <FilterPanel themes={THEMES} />
+
+    <div class="result-bar">
+      <p data-result-status aria-live="polite">显示 {papers.length} 篇 · Showing {papers.length} papers</p>
+      <p>筛选只在当前页面生效 · Filters stay on this page</p>
+    </div>
+
+    <div class="paper-list" data-paper-list>
+      {papers.map((paper) => <PaperCard paper={paper} />)}
+    </div>
+    <div class="empty-results" data-empty-results hidden>
+      <h2>没有匹配的论文 · No matching papers</h2>
+      <p>减少筛选条件，或尝试标题、作者、方法和任务中的其他关键词。</p>
+      <button type="button" class="button-secondary" data-empty-clear>清除筛选 · Clear filters</button>
+    </div>
+    <script is:inline type="application/json" id="paper-index-data" set:html={serializedPapers}></script>
+  </main>
+</BaseLayout>
+
+<script>
+  import { filterPapers, sortPapers } from '../../lib/filter-papers';
+  import type { Difficulty, EvidenceStatus, PaperIndexItem, Presentation } from '../../lib/papers';
+
+  const form = document.querySelector<HTMLFormElement>('[data-filter-form]');
+  const list = document.querySelector<HTMLElement>('[data-paper-list]');
+  const status = document.querySelector<HTMLElement>('[data-result-status]');
+  const empty = document.querySelector<HTMLElement>('[data-empty-results]');
+  const dataNode = document.querySelector<HTMLScriptElement>('#paper-index-data');
+
+  if (form && list && status && empty && dataNode) {
+    const papers = JSON.parse(dataNode.textContent ?? '[]') as PaperIndexItem[];
+    const cards = new Map(
+      [...list.querySelectorAll<HTMLElement>('[data-paper-card]')].map((card) => [card.dataset.paperId ?? '', card]),
+    );
+
+    const checked = (name: string) => [...form.querySelectorAll<HTMLInputElement>(`input[name="${name}"]:checked`)]
+      .map((input) => input.value);
+
+    const applyFilters = () => {
+      const formData = new FormData(form);
+      const filtered = filterPapers(papers, {
+        query: String(formData.get('query') ?? ''),
+        themes: checked('themes'),
+        evidence: checked('evidence') as EvidenceStatus[],
+        difficulty: checked('difficulty') as Difficulty[],
+        presentations: checked('presentations') as Presentation[],
+      });
+      const order = String(formData.get('sort') ?? 'recommended') as Parameters<typeof sortPapers>[1];
+      const sorted = sortPapers(filtered, order);
+      const visibleIds = new Set(sorted.map((paper) => paper.id));
+
+      for (const paper of [...sorted, ...papers.filter((paper) => !visibleIds.has(paper.id))]) {
+        const card = cards.get(paper.id);
+        if (!card) continue;
+        card.hidden = !visibleIds.has(paper.id);
+        list.append(card);
+      }
+
+      const count = sorted.length;
+      status.textContent = `显示 ${count} 篇 · Showing ${count} ${count === 1 ? 'paper' : 'papers'}`;
+      empty.hidden = count !== 0;
+    };
+
+    const clearFilters = () => {
+      form.reset();
+      applyFilters();
+      form.querySelector<HTMLInputElement>('input[type="search"]')?.focus();
+    };
+
+    form.addEventListener('input', applyFilters);
+    form.addEventListener('change', applyFilters);
+    form.addEventListener('submit', (event) => event.preventDefault());
+    form.querySelector('[data-clear-filters]')?.addEventListener('click', clearFilters);
+    empty.querySelector('[data-empty-clear]')?.addEventListener('click', clearFilters);
+    applyFilters();
+  }
+</script>
