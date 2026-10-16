@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T06:28:47.745Z",
+  "generatedAt": "2026-10-16T06:35:12.740Z",
   "totalPapers": 110,
   "batchSize": 10,
   "batches": [
@@ -503,70 +503,70 @@
           "title": "Beyond Solving: A Closer Look at LLMs as Solution Verifiers",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=Hv5hDfbhuB",
-          "id": "beyond-solving-a-closer-look-at-llms-as-solution-verifiers"
+          "id": "solution-verifier-gain"
         },
         {
           "sourceIndex": 62,
           "title": "Aligned but Stereotypical? Understanding and Mitigating Social Bias in LLM-Driven Text-to-Image Models",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=RvgoRhan6d",
-          "id": "aligned-but-stereotypical-understanding-and-mitigating-social-bias-in-llm-driven-text-to-image-models"
+          "id": "fairpro"
         },
         {
           "sourceIndex": 63,
           "title": "Do Depth-Grown Models Overcome the Curse of Depth? An In-Depth Analysis",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=Enqas0eZF6",
-          "id": "do-depth-grown-models-overcome-the-curse-of-depth-an-in-depth-analysis"
+          "id": "depth-grown-models"
         },
         {
           "sourceIndex": 64,
           "title": "CoT-Seg: Rethinking Segmentation with Chain-of-Thought Reasoning and Self-Correction",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=BtHRvwzJj8",
-          "id": "cot-seg-rethinking-segmentation-with-chain-of-thought-reasoning-and-self-correction"
+          "id": "cot-seg"
         },
         {
           "sourceIndex": 65,
           "title": "AlphaApollo: A System for Deep Agentic Reasoning",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=UcIFJPXqrB",
-          "id": "alphaapollo-a-system-for-deep-agentic-reasoning"
+          "id": "alphaapollo"
         },
         {
           "sourceIndex": 66,
           "title": "Reasoning Within the Mind: Dynamic Multimodal Interleaving in Latent Space",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=fWrhAOQZ5A",
-          "id": "reasoning-within-the-mind-dynamic-multimodal-interleaving-in-latent-space"
+          "id": "dmlr"
         },
         {
           "sourceIndex": 67,
           "title": "Leveraging Suboptimal and Noisy Trajectories for Goal-Conditional Offline RL",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=jfi88XbVsn",
-          "id": "leveraging-suboptimal-and-noisy-trajectories-for-goal-conditional-offline-rl"
+          "id": "noisy-offline-rl"
         },
         {
           "sourceIndex": 68,
           "title": "AUTOHARNESS: IMPROVING LLM AGENTS BY AUTOMATICALLY SYNTHESIZING A CODE HARNESS",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=g9rEYVNn5T",
-          "id": "autoharness-improving-llm-agents-by-automatically-synthesizing-a-code-harness"
+          "id": "autoharness"
         },
         {
           "sourceIndex": 69,
           "title": "One-Step Video Depth Estimation via Self-Distillation",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=ucRjPd9HVU",
-          "id": "one-step-video-depth-estimation-via-self-distillation"
+          "id": "one-step-video-depth"
         },
         {
           "sourceIndex": 70,
           "title": "Discover the distinguishing and effective reasoning patterns among LLMs via an LLM",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=z9MOHU8RjL",
-          "id": "discover-the-distinguishing-and-effective-reasoning-patterns-among-llms-via-an-llm"
+          "id": "lot-reasoning-patterns"
         }
       ]
     },

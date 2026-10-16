@@ -64,6 +64,16 @@ const SEED_IDS = new Map([
   [58, 'code-agent-reward-hacking'],
   [59, 'attwarp'],
   [60, 'test-time-curriculum-curation'],
+  [61, 'solution-verifier-gain'],
+  [62, 'fairpro'],
+  [63, 'depth-grown-models'],
+  [64, 'cot-seg'],
+  [65, 'alphaapollo'],
+  [66, 'dmlr'],
+  [67, 'noisy-offline-rl'],
+  [68, 'autoharness'],
+  [69, 'one-step-video-depth'],
+  [70, 'lot-reasoning-patterns'],
 ]);
 
 function positiveInteger(value, label) {
