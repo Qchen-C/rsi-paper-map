@@ -104,6 +104,16 @@ const SEED_IDS = new Map([
   [98, 'sare'],
   [99, 'verifying-the-verifiers'],
   [100, 'just-enough-learning'],
+  [101, 'praxis'],
+  [102, 'reference-guided-unlearning'],
+  [103, 'many-shot-test-time-adaptation'],
+  [104, 'cross-family-speculative-prefill'],
+  [105, 'depth-vs-recursion'],
+  [106, 'mass'],
+  [107, 'federation-over-text'],
+  [108, 'tamperbench'],
+  [109, 'build-judge-optimize'],
+  [110, 'orthogonal-continual-unlearning'],
 ]);
 
 function positiveInteger(value, label) {

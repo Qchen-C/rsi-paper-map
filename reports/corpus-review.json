@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T06:59:04.350Z",
+  "generatedAt": "2026-10-16T07:10:24.165Z",
   "totalPapers": 110,
   "batchSize": 10,
   "batches": [
@@ -827,42 +827,42 @@
           "title": "Real-Time Procedural Learning From Experience for AI Agents",
           "presentation": "short",
           "openreviewUrl": "https://openreview.net/forum?id=MKG4BaSieN",
-          "id": "real-time-procedural-learning-from-experience-for-ai-agents"
+          "id": "praxis"
         },
         {
           "sourceIndex": 102,
           "title": "Reference-Guided Machine Unlearning",
           "presentation": "short",
           "openreviewUrl": "https://openreview.net/forum?id=0IbjWHRGMC",
-          "id": "reference-guided-machine-unlearning"
+          "id": "reference-guided-unlearning"
         },
         {
           "sourceIndex": 103,
           "title": "Test-Time Adaptation via Many-Shot Prompting: Benefits, Limits, and Pitfalls",
           "presentation": "short",
           "openreviewUrl": "https://openreview.net/forum?id=Ne0s3UOzdB",
-          "id": "test-time-adaptation-via-many-shot-prompting-benefits-limits-and-pitfalls"
+          "id": "many-shot-test-time-adaptation"
         },
         {
           "sourceIndex": 104,
           "title": "Cross-Family Speculative Prefill: Training-Free Long-Context Compression with Small Draft Models",
           "presentation": "short",
           "openreviewUrl": "https://openreview.net/forum?id=7dNjMllnWe",
-          "id": "cross-family-speculative-prefill-training-free-long-context-compression-with-small-draft-models"
+          "id": "cross-family-speculative-prefill"
         },
         {
           "sourceIndex": 105,
           "title": "Depth vs Recursion: Outperforming Transformers in Jigsaw Reconstruction",
           "presentation": "short",
           "openreviewUrl": "https://openreview.net/forum?id=1zDG1o16xB",
-          "id": "depth-vs-recursion-outperforming-transformers-in-jigsaw-reconstruction"
+          "id": "depth-vs-recursion"
         },
         {
           "sourceIndex": 106,
           "title": "Test-Time Meta-Adaptation with Self-Synthesis",
           "presentation": "short",
           "openreviewUrl": "https://openreview.net/forum?id=G0GE1xbR0w",
-          "id": "test-time-meta-adaptation-with-self-synthesis"
+          "id": "mass"
         },
         {
           "sourceIndex": 107,
@@ -876,21 +876,21 @@
           "title": "TamperBench: A Systematic Framework to Stress-Test LLM Safety Under Fine-Tuning and Tampering",
           "presentation": "short",
           "openreviewUrl": "https://openreview.net/forum?id=smLtz7WID0",
-          "id": "tamperbench-a-systematic-framework-to-stress-test-llm-safety-under-fine-tuning-and-tampering"
+          "id": "tamperbench"
         },
         {
           "sourceIndex": 109,
           "title": "Build, Judge, Optimize: A Blueprint for Continuous Improvement of Multi-Agent Consumer Assistants",
           "presentation": "short",
           "openreviewUrl": "https://openreview.net/forum?id=FySoHBWmt9",
-          "id": "build-judge-optimize-a-blueprint-for-continuous-improvement-of-multi-agent-consumer-assistants"
+          "id": "build-judge-optimize"
         },
         {
           "sourceIndex": 110,
           "title": "Orthogonal Gradient Projection for Continual LLM Unlearning",
           "presentation": "short",
           "openreviewUrl": "https://openreview.net/forum?id=lb6Ce20kl5",
-          "id": "orthogonal-gradient-projection-for-continual-llm-unlearning"
+          "id": "orthogonal-continual-unlearning"
         }
       ]
     }
