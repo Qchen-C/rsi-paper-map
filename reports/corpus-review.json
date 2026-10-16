@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T06:51:42.037Z",
+  "generatedAt": "2026-10-16T06:59:04.350Z",
   "totalPapers": 110,
   "batchSize": 10,
   "batches": [
@@ -746,21 +746,21 @@
           "title": "Emergent temporal abstractions in autoregressive models enable hierarchical reinforcement learning",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=5UbKomO77O",
-          "id": "emergent-temporal-abstractions-in-autoregressive-models-enable-hierarchical-reinforcement-learning"
+          "id": "temporal-abstractions-internal-rl"
         },
         {
           "sourceIndex": 92,
           "title": "Refining Large Language Models with Self-Generated Data Through Iterative Training",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=81P20Qg44P",
-          "id": "refining-large-language-models-with-self-generated-data-through-iterative-training"
+          "id": "iterative-self-generated-training"
         },
         {
           "sourceIndex": 93,
           "title": "Inference-Time Scaling in Diffusion Models through Iterative Partial Refinement",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=QopjICzGwr",
-          "id": "inference-time-scaling-in-diffusion-models-through-iterative-partial-refinement"
+          "id": "iterative-partial-refinement"
         },
         {
           "sourceIndex": 94,
@@ -774,42 +774,42 @@
           "title": "SAHOO: Safeguarded Alignment for High-Order Optimization Objectives in Recursive Self-Improvement",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=OAFPpQO0H9",
-          "id": "sahoo-safeguarded-alignment-for-high-order-optimization-objectives-in-recursive-self-improvement"
+          "id": "sahoo"
         },
         {
           "sourceIndex": 96,
           "title": "Structure Enables Effective Self-Localization of Errors in LLMs",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=QbL99Fyqsl",
-          "id": "structure-enables-effective-self-localization-of-errors-in-llms"
+          "id": "structured-error-localization"
         },
         {
           "sourceIndex": 97,
           "title": "Self-Improvement via Fast Tree-search",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=wZMNXHPYcO",
-          "id": "self-improvement-via-fast-tree-search"
+          "id": "sift"
         },
         {
           "sourceIndex": 98,
           "title": "Self-Adapting Agents for Automating Research Coding Workflows",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=ihcRmUkXHF",
-          "id": "self-adapting-agents-for-automating-research-coding-workflows"
+          "id": "sare"
         },
         {
           "sourceIndex": 99,
           "title": "Verifying the Verifiers: Failure Attribution for Agentic Benchmark Diagnostics and Training Data Curation",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=iRhaK8PsuB",
-          "id": "verifying-the-verifiers-failure-attribution-for-agentic-benchmark-diagnostics-and-training-data-curation"
+          "id": "verifying-the-verifiers"
         },
         {
           "sourceIndex": 100,
           "title": "Just Enough Learning: GRPO-Guided Controllers for Hyperparameter Sweeps",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=kKWSQsYgpa",
-          "id": "just-enough-learning-grpo-guided-controllers-for-hyperparameter-sweeps"
+          "id": "just-enough-learning"
         }
       ]
     },

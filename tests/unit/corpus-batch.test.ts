@@ -170,6 +170,22 @@ describe('corpus research batches', () => {
     ]);
   });
 
+  it('assigns stable editorial ids to the tenth review batch', () => {
+    const packet = selectCorpusBatch(manifest, 10, 10);
+    assert.deepEqual(packet.papers.map((paper) => paper.id), [
+      'temporal-abstractions-internal-rl',
+      'iterative-self-generated-training',
+      'iterative-partial-refinement',
+      'in-context-adaptation',
+      'sahoo',
+      'structured-error-localization',
+      'sift',
+      'sare',
+      'verifying-the-verifiers',
+      'just-enough-learning',
+    ]);
+  });
+
   it('rejects invalid batch numbers and sizes', () => {
     assert.throws(() => buildCorpusBatches(manifest, 0), /positive integer/);
     assert.throws(() => selectCorpusBatch(manifest, 0, 10), /positive integer/);
