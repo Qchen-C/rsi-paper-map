@@ -6,12 +6,12 @@ test.describe('research map homepage', () => {
     await page.goto('/rsi-paper-map/');
   });
 
-  test('shows the bilingual preview, real corpus counts, themes, and entry path', async ({ page }) => {
+  test('shows the complete bilingual corpus, real counts, themes, and entry path', async ({ page }) => {
     await expect(page.getByRole('heading', { level: 1 })).toContainText('Understand the loop');
-    await expect(page.getByText('4 research cards')).toBeVisible();
+    await expect(page.getByText('110 research cards')).toBeVisible();
     await expect(page.getByText('110-paper index')).toBeVisible();
     await expect(page.locator('[data-theme-link]')).toHaveCount(9);
-    await expect(page.locator('#entry-path [data-paper-title]')).toHaveCount(4);
+    await expect(page.locator('#entry-path [data-paper-title]')).toHaveCount(10);
   });
 
   test('cycles and persists language mode without hiding English paper titles', async ({ page }) => {

@@ -5,13 +5,14 @@ import { describe, it } from 'node:test';
 const read = (path: string) => readFile(new URL(`../../${path}`, import.meta.url), 'utf8');
 
 describe('homepage source contract', () => {
-  it('derives preview statistics from the content collections and locked manifest', async () => {
+  it('derives release statistics from the complete content collection and locked manifest', async () => {
     const source = await read('src/pages/index.astro');
     assert.match(source, /getCollection\('papers'\)/);
     assert.match(source, /workshopPapers\.length/);
     assert.match(source, /THEMES\.length/);
     assert.match(source, /readingPaths\.length/);
-    assert.match(source, /preview/i);
+    assert.doesNotMatch(source, /preview-note/);
+    assert.match(source, /Complete corpus · 110 篇已完成/);
   });
 
   it('renders all themes and the entry path through dedicated components', async () => {

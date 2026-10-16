@@ -11,7 +11,7 @@
     "test": "npm run test:unit",
     "test:unit": "node --test-isolation=none --test",
     "test:e2e": "playwright test",
-    "validate:corpus": "node scripts/validate-corpus.mjs --allow-partial",
+    "validate:corpus": "node scripts/validate-corpus.mjs",
     "check:links": "node scripts/check-links.mjs"
   },
   "dependencies": {
