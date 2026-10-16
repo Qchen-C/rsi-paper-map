@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T06:35:12.740Z",
+  "generatedAt": "2026-10-16T06:41:56.514Z",
   "totalPapers": 110,
   "batchSize": 10,
   "batches": [
@@ -584,70 +584,70 @@
           "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=f1eKYFvMNu",
-          "id": "agentic-context-engineering-evolving-contexts-for-self-improving-language-models"
+          "id": "ace-context-engineering"
         },
         {
           "sourceIndex": 72,
           "title": "Self-EvolveRec: Self-Evolving Recommender Systems with LLM-based Directional Feedback",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=KCcpSuocz0",
-          "id": "self-evolverec-self-evolving-recommender-systems-with-llm-based-directional-feedback"
+          "id": "self-evolverec"
         },
         {
           "sourceIndex": 73,
           "title": "Learning to Evolve: Scaling Open-Ended Discovery with Relative-Progress RL",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=WnZHbe1Gu0",
-          "id": "learning-to-evolve-scaling-open-ended-discovery-with-relative-progress-rl"
+          "id": "learning-to-evolve"
         },
         {
           "sourceIndex": 74,
           "title": "Improved Iterative Refinement for Chart-to-Code Generation via Structured Instruction",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=KgkMSbYoL1",
-          "id": "improved-iterative-refinement-for-chart-to-code-generation-via-structured-instruction"
+          "id": "chartir"
         },
         {
           "sourceIndex": 75,
           "title": "Language-Guided Expertise Evolution for Protein Optimization",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=NeNWeyfUJj",
-          "id": "language-guided-expertise-evolution-for-protein-optimization"
+          "id": "protein-expertise-evolution"
         },
         {
           "sourceIndex": 76,
           "title": "A Task-Centric Theory for Iterative Self-Improvement with Easy-to-Hard Curricula",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=EEc4Pn2GSa",
-          "id": "a-task-centric-theory-for-iterative-self-improvement-with-easy-to-hard-curricula"
+          "id": "task-centric-self-improvement"
         },
         {
           "sourceIndex": 77,
           "title": "Adaptive Decoding via Test-Time Policy Learning for Self-Improving Generation",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=7fIqKZ92Fy",
-          "id": "adaptive-decoding-via-test-time-policy-learning-for-self-improving-generation"
+          "id": "adaptive-decoding-policy"
         },
         {
           "sourceIndex": 78,
           "title": "Dynamic Noise Preference Optimization: Self-Improvement of Large Language Models with Self-Synthetic Data",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=nT1gTSAf07",
-          "id": "dynamic-noise-preference-optimization-self-improvement-of-large-language-models-with-self-synthetic-data"
+          "id": "dnpo"
         },
         {
           "sourceIndex": 79,
           "title": "Vision-Guided Iterative Refinement for Frontend Code Generation",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=gF6jmAsbpZ",
-          "id": "vision-guided-iterative-refinement-for-frontend-code-generation"
+          "id": "frontend-vision-refinement"
         },
         {
           "sourceIndex": 80,
           "title": "MAPPA: Scaling Multiagent Systems with Process Rewards",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=s06wgoO65a",
-          "id": "mappa-scaling-multiagent-systems-with-process-rewards"
+          "id": "mappa"
         }
       ]
     },

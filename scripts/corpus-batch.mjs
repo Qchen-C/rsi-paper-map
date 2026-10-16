@@ -74,6 +74,16 @@ const SEED_IDS = new Map([
   [68, 'autoharness'],
   [69, 'one-step-video-depth'],
   [70, 'lot-reasoning-patterns'],
+  [71, 'ace-context-engineering'],
+  [72, 'self-evolverec'],
+  [73, 'learning-to-evolve'],
+  [74, 'chartir'],
+  [75, 'protein-expertise-evolution'],
+  [76, 'task-centric-self-improvement'],
+  [77, 'adaptive-decoding-policy'],
+  [78, 'dnpo'],
+  [79, 'frontend-vision-refinement'],
+  [80, 'mappa'],
 ]);
 
 function positiveInteger(value, label) {
