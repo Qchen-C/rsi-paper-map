@@ -24,6 +24,16 @@ const SEED_IDS = new Map([
   [18, 'pld-residual-rl'],
   [19, 'vlaw'],
   [20, 'test-time-self-distillation'],
+  [21, 'self-evolving-rubrics'],
+  [22, 'anchored-self-play-code-repair'],
+  [23, 'interestingness-compression-progress'],
+  [24, 'gasp'],
+  [25, 'adaptive-meta-curriculum'],
+  [26, 'automedprompt-textual-gradients'],
+  [27, 'fedagent'],
+  [28, 'agent0-vl'],
+  [29, 'omega'],
+  [30, 'self-directed-robot-learning'],
 ]);
 
 function positiveInteger(value, label) {

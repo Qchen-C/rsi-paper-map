@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T05:54:43.926Z",
+  "generatedAt": "2026-10-16T06:02:11.591Z",
   "totalPapers": 110,
   "batchSize": 10,
   "batches": [
@@ -179,70 +179,70 @@
           "title": "Self-Evolving Rubrics: Interpretable Instance-Level Criteria for Scalable RL",
           "presentation": "spotlight",
           "openreviewUrl": "https://openreview.net/forum?id=aA2PXFH2Cp",
-          "id": "self-evolving-rubrics-interpretable-instance-level-criteria-for-scalable-rl"
+          "id": "self-evolving-rubrics"
         },
         {
           "sourceIndex": 22,
           "title": "Anchored Self-Play for Code Repair",
           "presentation": "spotlight",
           "openreviewUrl": "https://openreview.net/forum?id=lTbBFAoPSA",
-          "id": "anchored-self-play-for-code-repair"
+          "id": "anchored-self-play-code-repair"
         },
         {
           "sourceIndex": 23,
           "title": "Interestingness as an Inductive Heuristic for Future Compression Progress",
           "presentation": "spotlight",
           "openreviewUrl": "https://openreview.net/forum?id=6GTlSlWW9C",
-          "id": "interestingness-as-an-inductive-heuristic-for-future-compression-progress"
+          "id": "interestingness-compression-progress"
         },
         {
           "sourceIndex": 24,
           "title": "GASP: Guided Asymmetric Self-Play For Coding LLMs",
           "presentation": "spotlight",
           "openreviewUrl": "https://openreview.net/forum?id=NYrOkAfDkP",
-          "id": "gasp-guided-asymmetric-self-play-for-coding-llms"
+          "id": "gasp"
         },
         {
           "sourceIndex": 25,
           "title": "Adaptive Meta-Curriculum for Test-Time Self-Improvement",
           "presentation": "spotlight",
           "openreviewUrl": "https://openreview.net/forum?id=GjoUJTfXiW",
-          "id": "adaptive-meta-curriculum-for-test-time-self-improvement"
+          "id": "adaptive-meta-curriculum"
         },
         {
           "sourceIndex": 26,
           "title": "Self-Improving Clinical Reasoning via Textual Gradients",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=VOa0lDJ5Ui",
-          "id": "self-improving-clinical-reasoning-via-textual-gradients"
+          "id": "automedprompt-textual-gradients"
         },
         {
           "sourceIndex": 27,
           "title": "Federated Agent Reinforcement Learning",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=h4iPWHGapI",
-          "id": "federated-agent-reinforcement-learning"
+          "id": "fedagent"
         },
         {
           "sourceIndex": 28,
           "title": "Agent0-VL: Exploring Self-Evolving Agent for Tool-Integrated Vision-Language Reasoning",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=JKx0zkUBsQ",
-          "id": "agent0-vl-exploring-self-evolving-agent-for-tool-integrated-vision-language-reasoning"
+          "id": "agent0-vl"
         },
         {
           "sourceIndex": 29,
           "title": "OMEGA: Optimizing Machine learning by Evaluating Generated Algorithms",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=4TUzVEzVdu",
-          "id": "omega-optimizing-machine-learning-by-evaluating-generated-algorithms"
+          "id": "omega"
         },
         {
           "sourceIndex": 30,
           "title": "Intelligent Robot Manipulation Requires Self-Directed Learning",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=hCjgh8jxKl",
-          "id": "intelligent-robot-manipulation-requires-self-directed-learning"
+          "id": "self-directed-robot-learning"
         }
       ]
     },
