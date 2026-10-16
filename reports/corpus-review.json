@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T06:02:11.591Z",
+  "generatedAt": "2026-10-16T06:10:23.825Z",
   "totalPapers": 110,
   "batchSize": 10,
   "batches": [
@@ -260,70 +260,70 @@
           "title": "Correct Reasoning Paths Visit Shared Decision Pivots",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=OlMSrldTNe",
-          "id": "correct-reasoning-paths-visit-shared-decision-pivots"
+          "id": "reasoning-decision-pivots"
         },
         {
           "sourceIndex": 32,
           "title": "RFTF: Reinforcement Fine-tuning for Vision-language-action Models with Temporal Feedback",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=mBgcG43j7a",
-          "id": "rftf-reinforcement-fine-tuning-for-vision-language-action-models-with-temporal-feedback"
+          "id": "rftf-temporal-feedback"
         },
         {
           "sourceIndex": 33,
           "title": "VerlTool: Towards Holistic Agentic Reinforcement Learning with Tool Use",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=l5QPYxMEaH",
-          "id": "verltool-towards-holistic-agentic-reinforcement-learning-with-tool-use"
+          "id": "verltool"
         },
         {
           "sourceIndex": 34,
           "title": "TangramSR: A Benchmark for Recursive Self-Improvement In Continuous Geometric Reasoning",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=5XGfbXlFmA",
-          "id": "tangramsr-a-benchmark-for-recursive-self-improvement-in-continuous-geometric-reasoning"
+          "id": "tangramsr"
         },
         {
           "sourceIndex": 35,
           "title": "SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=56D2hjARkn",
-          "id": "skillrl-evolving-agents-via-recursive-skill-augmented-reinforcement-learning"
+          "id": "skillrl"
         },
         {
           "sourceIndex": 36,
           "title": "A Framework for Prompt Optimization and Translation Across Foundation Models",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=gOTCn5uZeE",
-          "id": "a-framework-for-prompt-optimization-and-translation-across-foundation-models"
+          "id": "prompt-translation"
         },
         {
           "sourceIndex": 37,
           "title": "Escaping Model Collapse via Synthetic Data Verification: Near-term Improvements and Long-term Convergence",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=YzDC5hjGUM",
-          "id": "escaping-model-collapse-via-synthetic-data-verification-near-term-improvements-and-long-term-convergence"
+          "id": "verified-synthetic-data"
         },
         {
           "sourceIndex": 38,
           "title": "LLM-FE: Automated Feature Engineering for Tabular Data with LLMs as Evolutionary Optimizers",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=KbGkWv7VEk",
-          "id": "llm-fe-automated-feature-engineering-for-tabular-data-with-llms-as-evolutionary-optimizers"
+          "id": "llm-fe"
         },
         {
           "sourceIndex": 39,
           "title": "Contrastive Self-Refinement for Low-Cost Adaptation in Real-World Text-to-SQL",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=tgnbgt3Ctr",
-          "id": "contrastive-self-refinement-for-low-cost-adaptation-in-real-world-text-to-sql"
+          "id": "seek-sql"
         },
         {
           "sourceIndex": 40,
           "title": "Simple Baselines are Competitive with Code Evolution",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=QSWFqDcveB",
-          "id": "simple-baselines-are-competitive-with-code-evolution"
+          "id": "simple-code-evolution-baselines"
         }
       ]
     },

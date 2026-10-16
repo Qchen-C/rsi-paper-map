@@ -34,6 +34,16 @@ const SEED_IDS = new Map([
   [28, 'agent0-vl'],
   [29, 'omega'],
   [30, 'self-directed-robot-learning'],
+  [31, 'reasoning-decision-pivots'],
+  [32, 'rftf-temporal-feedback'],
+  [33, 'verltool'],
+  [34, 'tangramsr'],
+  [35, 'skillrl'],
+  [36, 'prompt-translation'],
+  [37, 'verified-synthetic-data'],
+  [38, 'llm-fe'],
+  [39, 'seek-sql'],
+  [40, 'simple-code-evolution-baselines'],
 ]);
 
 function positiveInteger(value, label) {
