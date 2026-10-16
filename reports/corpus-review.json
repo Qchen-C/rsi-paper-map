@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T06:10:23.825Z",
+  "generatedAt": "2026-10-16T06:20:56.241Z",
   "totalPapers": 110,
   "batchSize": 10,
   "batches": [
@@ -341,70 +341,70 @@
           "title": "Rethinking Machine Unlearning: Models Designed to Forget via Key Deletion",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=gGH3Xp1lHR",
-          "id": "rethinking-machine-unlearning-models-designed-to-forget-via-key-deletion"
+          "id": "munkey"
         },
         {
           "sourceIndex": 42,
           "title": "Self-CriTeach: LLM Self-Teaching and Self-Critiquing for Improving Robotic Planning via Automated Domain Generation",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=8I0n20ufAy",
-          "id": "self-criteach-llm-self-teaching-and-self-critiquing-for-improving-robotic-planning-via-automated-domain-generation"
+          "id": "self-criteach"
         },
         {
           "sourceIndex": 43,
           "title": "Unlocking Intrinsic Self-Reflection for LLM Preference Policy Optimization",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=0ZGL40jRKE",
-          "id": "unlocking-intrinsic-self-reflection-for-llm-preference-policy-optimization"
+          "id": "inspo"
         },
         {
           "sourceIndex": 44,
           "title": "TextBO: Bayesian Optimization in Language Space for Eval-Efficient Self-Improving AI",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=h0XYERyeL6",
-          "id": "textbo-bayesian-optimization-in-language-space-for-eval-efficient-self-improving-ai"
+          "id": "textbo"
         },
         {
           "sourceIndex": 45,
           "title": "POLARIS: A GODEL AGENT FRAMEWORK FOR SMALL LANGUAGE MODELS THROUGH EXPERIENCE ABSTRACTED POLICY REPAIR",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=wlwkLVvB0W",
-          "id": "polaris-a-godel-agent-framework-for-small-language-models-through-experience-abstracted-policy-repair"
+          "id": "polaris"
         },
         {
           "sourceIndex": 46,
           "title": "Shape of Thought: When Distribution Matters More than Correctness in Reasoning Tasks",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=Oc5R3D2TfE",
-          "id": "shape-of-thought-when-distribution-matters-more-than-correctness-in-reasoning-tasks"
+          "id": "shape-of-thought"
         },
         {
           "sourceIndex": 47,
           "title": "Reasoning as Gradient: Scaling MLE Agents Beyond Tree Search",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=TnjlvLY30w",
-          "id": "reasoning-as-gradient-scaling-mle-agents-beyond-tree-search"
+          "id": "reasoning-as-gradient"
         },
         {
           "sourceIndex": 48,
           "title": "Teaching Models to Teach Themselves: Reasoning at the Edge of Learnability",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=HuLoDnvC29",
-          "id": "teaching-models-to-teach-themselves-reasoning-at-the-edge-of-learnability"
+          "id": "soar"
         },
         {
           "sourceIndex": 49,
           "title": "Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=0DyJeJ3iia",
-          "id": "evaluating-agents-md-are-repository-level-context-files-helpful-for-coding-agents"
+          "id": "evaluating-agents-md"
         },
         {
           "sourceIndex": 50,
           "title": "Compute as Teacher: Turning Inference Compute Into Reference-Free Supervision",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=WA6q2pNQhj",
-          "id": "compute-as-teacher-turning-inference-compute-into-reference-free-supervision"
+          "id": "compute-as-teacher"
         }
       ]
     },
