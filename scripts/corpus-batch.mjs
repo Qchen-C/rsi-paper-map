@@ -84,6 +84,16 @@ const SEED_IDS = new Map([
   [78, 'dnpo'],
   [79, 'frontend-vision-refinement'],
   [80, 'mappa'],
+  [81, 'residual-off-policy-rl'],
+  [82, 'sage'],
+  [83, 'soft-mellowmax-planning'],
+  [84, 'log-augmented-generation'],
+  [85, 'self-improving-vlm-judge'],
+  [86, 'duel-evolve'],
+  [87, 'mimicagent'],
+  [88, 'feedback-descent'],
+  [89, 'circuitbuilder'],
+  [90, 'generative-recursive-reasoning'],
 ]);
 
 function positiveInteger(value, label) {

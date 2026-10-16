@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T06:41:56.514Z",
+  "generatedAt": "2026-10-16T06:51:42.037Z",
   "totalPapers": 110,
   "batchSize": 10,
   "batches": [
@@ -665,70 +665,70 @@
           "title": "Residual Off-Policy RL for Finetuning Behavior Cloning Policies",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=9m4kM3bK2b",
-          "id": "residual-off-policy-rl-for-finetuning-behavior-cloning-policies"
+          "id": "residual-off-policy-rl"
         },
         {
           "sourceIndex": 82,
           "title": "SAGE: Self-play Adversarial Games Enhance Large Language Model Reasoning Capabilities",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=b3dPMokQki",
-          "id": "sage-self-play-adversarial-games-enhance-large-language-model-reasoning-capabilities"
+          "id": "sage"
         },
         {
           "sourceIndex": 83,
           "title": "Soft Mellowmax Monte Carlo Planning",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=SeZCSEGZTq",
-          "id": "soft-mellowmax-monte-carlo-planning"
+          "id": "soft-mellowmax-planning"
         },
         {
           "sourceIndex": 84,
           "title": "Log-Augmented Generation: Scaling Test-Time Reasoning with Reusable Computation",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=32xd2HdB9m",
-          "id": "log-augmented-generation-scaling-test-time-reasoning-with-reusable-computation"
+          "id": "log-augmented-generation"
         },
         {
           "sourceIndex": 85,
           "title": "Self-Improving VLM Judges Without Human Annotations",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=8hYSvUpJBA",
-          "id": "self-improving-vlm-judges-without-human-annotations"
+          "id": "self-improving-vlm-judge"
         },
         {
           "sourceIndex": 86,
           "title": "Duel-Evolve: Pairwise Preference Black-Box Optimization of LLM Responses",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=38t39AFZPE",
-          "id": "duel-evolve-pairwise-preference-black-box-optimization-of-llm-responses"
+          "id": "duel-evolve"
         },
         {
           "sourceIndex": 87,
           "title": "MimicAgent: Learning Quadruped Skills via Text-to-Trajectory Generation",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=1iAEFtFQ9M",
-          "id": "mimicagent-learning-quadruped-skills-via-text-to-trajectory-generation"
+          "id": "mimicagent"
         },
         {
           "sourceIndex": 88,
           "title": "Feedback Descent: Open-Ended Text Optimization via Pairwise Comparison",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=A0dlCcZ4hT",
-          "id": "feedback-descent-open-ended-text-optimization-via-pairwise-comparison"
+          "id": "feedback-descent"
         },
         {
           "sourceIndex": 89,
           "title": "CircuitBuilder: From Polynomials to Circuits via Reinforcement Learning",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=JNsTWIukjQ",
-          "id": "circuitbuilder-from-polynomials-to-circuits-via-reinforcement-learning"
+          "id": "circuitbuilder"
         },
         {
           "sourceIndex": 90,
           "title": "Generative Recursive Reasoning Models",
           "presentation": "poster",
           "openreviewUrl": "https://openreview.net/forum?id=Vxu6kcIjwV",
-          "id": "generative-recursive-reasoning-models"
+          "id": "generative-recursive-reasoning"
         }
       ]
     },
