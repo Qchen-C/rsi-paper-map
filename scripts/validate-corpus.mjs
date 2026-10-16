@@ -80,6 +80,23 @@ export function validateCorpus(entries, options = {}) {
     }
   }
 
+  if (options.requiredStatus && Array.isArray(options.requiredPaperIds)) {
+    const entriesById = new Map(entries.map((entry) => [entry.id, entry]));
+    for (const requiredId of options.requiredPaperIds) {
+      const requiredEntry = entriesById.get(requiredId);
+      if (!requiredEntry) {
+        issues.push(issue('required-paper-missing', requiredId, 'id', `Required paper is missing: ${requiredId}`));
+      } else if (requiredEntry.data?.evidenceStatus !== options.requiredStatus) {
+        issues.push(issue(
+          'evidence-status',
+          requiredId,
+          'evidenceStatus',
+          `Expected ${options.requiredStatus}, received ${requiredEntry.data?.evidenceStatus ?? 'missing'}`,
+        ));
+      }
+    }
+  }
+
   return issues;
 }
 
@@ -121,19 +138,41 @@ function hasFlag(args, flag) {
   return args.includes(flag);
 }
 
+export function parseCliOptions(args) {
+  const options = { allowPartial: hasFlag(args, '--allow-partial') };
+  const statusIndex = args.indexOf('--require-status');
+  if (statusIndex >= 0) {
+    const requiredStatus = args[statusIndex + 1];
+    if (!requiredStatus || requiredStatus.startsWith('--')) {
+      throw new Error('--require-status needs a status followed by one or more paper ids');
+    }
+    const requiredPaperIds = [];
+    for (const value of args.slice(statusIndex + 2)) {
+      if (value.startsWith('--')) break;
+      requiredPaperIds.push(value);
+    }
+    if (requiredPaperIds.length === 0) {
+      throw new Error('--require-status needs at least one paper id');
+    }
+    options.requiredStatus = requiredStatus;
+    options.requiredPaperIds = requiredPaperIds;
+  }
+  return options;
+}
+
 async function runCli() {
   const args = process.argv.slice(2);
-  const allowPartial = hasFlag(args, '--allow-partial');
+  const options = parseCliOptions(args);
   const manifest = JSON.parse(await readFile(resolve('src/data/workshop-papers.json'), 'utf8'));
   assertReleaseManifest(manifest);
   const entries = await loadPaperEntries();
-  const issues = validateCorpus(entries, { allowPartial });
+  const issues = validateCorpus(entries, options);
   if (issues.length > 0) {
     for (const current of issues) console.error(`${current.code} [${current.paperId}.${current.field}]: ${current.message}`);
     process.exitCode = 1;
     return;
   }
-  console.log(`${entries.length} paper(s) validated${allowPartial ? ' (partial corpus allowed)' : ''}`);
+  console.log(`${entries.length} paper(s) validated${options.allowPartial ? ' (partial corpus allowed)' : ''}`);
 }
 
 const currentFile = fileURLToPath(import.meta.url);

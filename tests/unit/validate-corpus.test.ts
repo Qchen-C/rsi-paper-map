@@ -47,6 +47,21 @@ describe('validateCorpus', () => {
     });
     assert.ok(issues.some((issue) => issue.code === 'presentation-distribution'));
   });
+
+  it('enforces a requested evidence status for named papers', () => {
+    const issues = validateCorpus([
+      entry('agent0', { evidenceStatus: 'full-text-checked' }),
+      entry('contextual-drag', { evidenceStatus: 'abstract-checked', checkedSections: [] }),
+    ], {
+      allowPartial: true,
+      requiredStatus: 'full-text-checked',
+      requiredPaperIds: ['agent0', 'contextual-drag', 'missing-paper'],
+    });
+
+    assert.ok(issues.some((issue) => issue.code === 'evidence-status' && issue.paperId === 'contextual-drag'));
+    assert.ok(issues.some((issue) => issue.code === 'required-paper-missing' && issue.paperId === 'missing-paper'));
+    assert.ok(!issues.some((issue) => issue.code === 'evidence-status' && issue.paperId === 'agent0'));
+  });
 });
 
 describe('checkSource', () => {
