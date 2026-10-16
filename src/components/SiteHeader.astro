@@ -1,0 +1,69 @@
+---
+import { withBase } from '../lib/base-path';
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '' } = Astro.props;
+const homeHref = withBase('/');
+const papersHref = withBase('/papers');
+const pathsHref = withBase('/#entry-path');
+const isHome = currentPath === homeHref || currentPath === `${homeHref}/`;
+---
+
+<header class="site-header">
+  <a class="brand" href={homeHref} aria-label="RSI Paper Map home">
+    <span class="brand-mark" aria-hidden="true">R↻</span>
+    <span class="brand-copy">
+      <strong>RSI Paper Map</strong>
+      <small>Recursive Self-Improvement · 2026</small>
+    </span>
+  </a>
+  <nav class="primary-nav" aria-label="主导航 · Primary navigation">
+    <a href={homeHref} aria-current={isHome ? 'page' : undefined}>首页 <span>Home</span></a>
+    <a href={papersHref}>论文库 <span>Papers</span></a>
+    <a href={pathsHref}>路线 <span>Paths</span></a>
+  </nav>
+  <button
+    class="language-switch"
+    type="button"
+    data-language-switch
+    aria-label="切换语言视图 · Change language view"
+    aria-live="polite"
+  >
+    中 / EN · 双语
+  </button>
+</header>
+
+<script>
+  import { loadLanguageMode, saveLanguageMode } from '../lib/language-mode';
+
+  const modes = ['bilingual', 'zh', 'en'] as const;
+  const labels = {
+    bilingual: '中 / EN · 双语',
+    zh: '中文 · ZH',
+    en: 'English · EN',
+  } as const;
+
+  function applyLanguage(mode: typeof modes[number]) {
+    document.documentElement.dataset.language = mode;
+    document.documentElement.lang = mode === 'en' ? 'en' : 'zh-CN';
+    document.querySelectorAll<HTMLButtonElement>('[data-language-switch]').forEach((button) => {
+      button.textContent = labels[mode];
+      button.dataset.mode = mode;
+    });
+  }
+
+  const storedMode = loadLanguageMode(window.localStorage);
+  applyLanguage(storedMode);
+
+  document.querySelectorAll<HTMLButtonElement>('[data-language-switch]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const current = (button.dataset.mode ?? 'bilingual') as typeof modes[number];
+      const next = modes[(modes.indexOf(current) + 1) % modes.length];
+      saveLanguageMode(window.localStorage, next);
+      applyLanguage(next);
+    });
+  });
+</script>

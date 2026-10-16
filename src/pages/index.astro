@@ -1,15 +1,95 @@
 ---
-const title = 'RSI Paper Map';
+import { getCollection } from 'astro:content';
+import ReadingPath from '../components/ReadingPath.astro';
+import ThemeMap from '../components/ThemeMap.astro';
+import { THEMES } from '../data/themes';
+import workshopPapers from '../data/workshop-papers.json';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/base-path';
+
+const papers = (await getCollection('papers')).sort((left, right) => left.data.sourceIndex - right.data.sourceIndex);
+const readingPaths = await getCollection('readingPaths');
+const entryPath = readingPaths.find((path) => path.data.id === 'entry');
+if (!entryPath) throw new Error('Entry reading path is missing');
+
+const entryPapers = entryPath.data.paperIds.flatMap((id) => {
+  const paper = papers.find((candidate) => candidate.id === id);
+  return paper ? [paper] : [];
+});
+const themes = THEMES.map((theme) => ({
+  ...theme,
+  count: papers.filter((paper) => paper.data.themes.includes(theme.id)).length,
+}));
+const evidenceStates = new Set(papers.map((paper) => paper.data.evidenceStatus)).size;
 ---
 
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
-  </head>
-  <body>
-    <main><h1>{title}</h1></main>
-  </body>
-</html>
+<BaseLayout
+  title="RSI Paper Map · 递归自我改进论文导航"
+  description="110 篇递归自我改进论文的中英双语主题地图、阅读路线与证据卡片。"
+>
+  <main id="main-content">
+    <section class="hero page-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="preview-note">Preview · 研究卡持续补全中</p>
+        <h1 id="hero-title">Understand the loop.<br />Choose what to read next.</h1>
+        <p class="lang-zh hero-lede">把递归自我改进研究拆成可比较的反馈闭环、九个主题和循序渐进的阅读路线。英文论文标题保留原文，解释提供中英双语。</p>
+        <p class="lang-en hero-lede">A researcher-first guide to feedback loops, nine connected themes, and reading paths across recursive self-improvement.</p>
+        <div class="hero-actions">
+          <a class="button-primary" href={withBase('/papers')}>浏览论文 · Explore papers</a>
+          <a class="button-secondary" href="#entry-path">从入门路线开始 · Start here</a>
+        </div>
+      </div>
+      <figure class="loop-figure" aria-labelledby="loop-caption">
+        <figcaption id="loop-caption">The recurring research loop · 共同研究闭环</figcaption>
+        <ol>
+          <li><span>01</span><strong>Generate</strong><small>任务、数据、记忆</small></li>
+          <li><span>02</span><strong>Act</strong><small>推理、工具、训练</small></li>
+          <li><span>03</span><strong>Evaluate</strong><small>验证、反馈、失败</small></li>
+          <li><span>04</span><strong>Update</strong><small>模型、代码、上下文</small></li>
+        </ol>
+        <p>Repeat with a changed system.</p>
+      </figure>
+    </section>
+
+    <section class="corpus-strip" aria-label="Collection statistics">
+      <div><strong>{papers.length}</strong><span>{papers.length} research cards</span><small>已完成双语研究卡</small></div>
+      <div><strong>{workshopPapers.length}</strong><span>{workshopPapers.length}-paper index</span><small>研讨会完整目录</small></div>
+      <div><strong>{THEMES.length}</strong><span>research themes</span><small>交叉研究主题</small></div>
+      <div><strong>{readingPaths.length}</strong><span>reading paths</span><small>循序阅读路线</small></div>
+      <div><strong>{evidenceStates}</strong><span>active evidence levels</span><small>当前证据等级</small></div>
+    </section>
+
+    <section class="page-shell home-section" id="entry-path" aria-labelledby="entry-path-title">
+      <h2 class="visually-hidden" id="entry-path-title">Entry reading path</h2>
+      <ReadingPath path={entryPath.data} papers={entryPapers} />
+    </section>
+
+    <section class="page-shell home-section themes-section" aria-labelledby="themes-title">
+      <header class="section-heading">
+        <div>
+          <p class="section-kicker">Field map</p>
+          <h2 id="themes-title">Nine ways systems try to improve themselves</h2>
+          <p class="lang-zh section-title-zh">系统尝试自我改进的九种路径</p>
+        </div>
+        <div class="section-note">
+          <p class="lang-en">Papers can belong to more than one theme. The count shows completed seed cards, not the final corpus.</p>
+          <p class="lang-zh">论文可以跨越多个主题；右侧数字只统计当前完成的研究卡，并非最终总量。</p>
+        </div>
+      </header>
+      <ThemeMap themes={themes} />
+    </section>
+
+    <section class="page-shell evidence-section" aria-labelledby="evidence-title">
+      <div>
+        <p class="section-kicker">Evidence before confidence</p>
+        <h2 id="evidence-title">Every summary says how deeply it was checked.</h2>
+        <p class="lang-zh section-title-zh">每份摘要都明确标注核对深度。</p>
+      </div>
+      <dl class="evidence-key">
+        <div><dt>Metadata</dt><dd>只确认标题、作者与入口链接</dd></div>
+        <div><dt>Abstract checked</dt><dd>已核对摘要及官方项目资料</dd></div>
+        <div><dt>Full text checked</dt><dd>已核对引言、方法、实验与结论</dd></div>
+      </dl>
+    </section>
+  </main>
+</BaseLayout>

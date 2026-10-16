@@ -1,0 +1,35 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'RSI Paper Map',
+  description = 'A bilingual, evidence-aware map of recursive self-improvement research.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN" data-language="bilingual">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f2efe6" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到正文 · Skip to content</a>
+    <SiteHeader currentPath={Astro.url.pathname} />
+    <slot />
+    <footer class="site-footer">
+      <p>RSI Paper Map · ICLR 2026 Workshop on Recursive Self-Improvement</p>
+      <p class="lang-zh">公开导航站，学习进度仅保存在你的浏览器。</p>
+      <p class="lang-en">Public research guide; reading progress stays in your browser.</p>
+    </footer>
+  </body>
+</html>

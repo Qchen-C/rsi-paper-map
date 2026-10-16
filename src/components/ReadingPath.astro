@@ -1,0 +1,60 @@
+---
+import { withBase } from '../lib/base-path';
+
+interface PathData {
+  titleEn: string;
+  titleZh: string;
+  descriptionEn: string;
+  descriptionZh: string;
+  targetLength?: number;
+}
+
+interface PathPaper {
+  id: string;
+  data: {
+    title: string;
+    titleZh: string;
+    difficulty: string;
+    evidenceStatus: string;
+  };
+}
+
+interface Props {
+  path: PathData;
+  papers: PathPaper[];
+}
+
+const { path, papers } = Astro.props;
+const evidenceLabel = (status: string) => status === 'full-text-checked'
+  ? '全文核对 · Full text'
+  : '摘要核对 · Abstract';
+---
+
+<div class="reading-path-shell">
+  <div class="path-intro">
+    <p class="section-kicker">Reading path</p>
+    <h2>{path.titleEn}</h2>
+    <p class="lang-zh section-title-zh">{path.titleZh}</p>
+    <p class="lang-en section-copy">{path.descriptionEn}</p>
+    <p class="lang-zh section-copy">{path.descriptionZh}</p>
+    {path.targetLength && (
+      <p class="path-target">当前 {papers.length} 篇 · 目标 {path.targetLength} 篇</p>
+    )}
+  </div>
+  <ol class="path-steps">
+    {papers.map((paper, index) => (
+      <li>
+        <a href={withBase(`/papers/${paper.id}`)}>
+          <span class="step-number">{String(index + 1).padStart(2, '0')}</span>
+          <span class="step-copy">
+            <strong data-paper-title>{paper.data.title}</strong>
+            <span class="lang-zh">{paper.data.titleZh}</span>
+          </span>
+          <span class="step-meta">
+            {paper.data.difficulty} · {evidenceLabel(paper.data.evidenceStatus)}
+          </span>
+        </a>
+      </li>
+    ))}
+  </ol>
+</div>

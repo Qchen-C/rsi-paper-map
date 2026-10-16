@@ -1,0 +1,35 @@
+---
+import type { Theme } from '../data/themes';
+import { withBase } from '../lib/base-path';
+
+interface ThemeWithCount extends Theme {
+  count: number;
+}
+
+interface Props {
+  themes: ThemeWithCount[];
+}
+
+const { themes } = Astro.props;
+---
+
+<div class="theme-map" aria-label="九个研究主题 · Nine research themes">
+  {themes.map((theme, index) => (
+    <a
+      class="theme-band"
+      href={withBase(`/papers?theme=${theme.id}`)}
+      data-theme-link
+    >
+      <span class="theme-index">{String(index + 1).padStart(2, '0')}</span>
+      <span class="theme-name">
+        <strong>{theme.titleEn}</strong>
+        <span class="lang-zh">{theme.titleZh}</span>
+      </span>
+      <span class="theme-description">
+        <span class="lang-en">{theme.descriptionEn}</span>
+        <span class="lang-zh">{theme.descriptionZh}</span>
+      </span>
+      <span class="theme-count" aria-label={`${theme.count} seed papers`}>{theme.count}</span>
+    </a>
+  ))}
+</div>
