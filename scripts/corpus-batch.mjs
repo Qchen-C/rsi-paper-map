@@ -14,6 +14,16 @@ const SEED_IDS = new Map([
   [8, 'parametric-skill-transfer'],
   [9, 'scaling-law-discovery'],
   [10, 'world-action-verifier'],
+  [11, 'tiny-autoregressive-recursive-models'],
+  [12, 'growing-to-looping'],
+  [13, 'lang-pinn'],
+  [14, 'evopresent'],
+  [15, 'ace-code-evolution'],
+  [16, 'discovery-to-application-loop'],
+  [17, 'causalevolve'],
+  [18, 'pld-residual-rl'],
+  [19, 'vlaw'],
+  [20, 'test-time-self-distillation'],
 ]);
 
 function positiveInteger(value, label) {

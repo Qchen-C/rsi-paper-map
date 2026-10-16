@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T02:17:16.292Z",
+  "generatedAt": "2026-10-16T05:54:43.926Z",
   "totalPapers": 110,
   "batchSize": 10,
   "batches": [
@@ -105,56 +105,56 @@
           "title": "From Growing to Looping: A Unified View of Iterative Computation in LLMs",
           "presentation": "spotlight",
           "openreviewUrl": "https://openreview.net/forum?id=yIDgVx3OoN",
-          "id": "from-growing-to-looping-a-unified-view-of-iterative-computation-in-llms"
+          "id": "growing-to-looping"
         },
         {
           "sourceIndex": 13,
           "title": "Lang-PINN: From Language to Physics-Informed Neural Networks via a Multi-Agent Framework",
           "presentation": "spotlight",
           "openreviewUrl": "https://openreview.net/forum?id=q5qN3oQ4D1",
-          "id": "lang-pinn-from-language-to-physics-informed-neural-networks-via-a-multi-agent-framework"
+          "id": "lang-pinn"
         },
         {
           "sourceIndex": 14,
           "title": "Presenting a Paper is an Art: Self-Improvement Aesthetic Agents for Academic Presentations",
           "presentation": "spotlight",
           "openreviewUrl": "https://openreview.net/forum?id=d40v7Qcpi4",
-          "id": "presenting-a-paper-is-an-art-self-improvement-aesthetic-agents-for-academic-presentations"
+          "id": "evopresent"
         },
         {
           "sourceIndex": 15,
           "title": "ACE: Self-Evolving LLM Coding Framework Adversarial Unit Test Generation and Preference Optimization",
           "presentation": "spotlight",
           "openreviewUrl": "https://openreview.net/forum?id=ecKAmz5vlO",
-          "id": "ace-self-evolving-llm-coding-framework-adversarial-unit-test-generation-and-preference-optimization"
+          "id": "ace-code-evolution"
         },
         {
           "sourceIndex": 16,
           "title": "Can Current Language Models Close the Discovery to Application Loop?",
           "presentation": "spotlight",
           "openreviewUrl": "https://openreview.net/forum?id=BAdK20xfqj",
-          "id": "can-current-language-models-close-the-discovery-to-application-loop"
+          "id": "discovery-to-application-loop"
         },
         {
           "sourceIndex": 17,
           "title": "CausalEvolve: Towards Open-Ended Discovery with Causal Scratchpad",
           "presentation": "spotlight",
           "openreviewUrl": "https://openreview.net/forum?id=14jSctSh0D",
-          "id": "causalevolve-towards-open-ended-discovery-with-causal-scratchpad"
+          "id": "causalevolve"
         },
         {
           "sourceIndex": 18,
           "title": "Self-Improving Vision-Language-Action Models with Data Generation via Residual RL",
           "presentation": "spotlight",
           "openreviewUrl": "https://openreview.net/forum?id=shqo2VPfc7",
-          "id": "self-improving-vision-language-action-models-with-data-generation-via-residual-rl"
+          "id": "pld-residual-rl"
         },
         {
           "sourceIndex": 19,
           "title": "VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model",
           "presentation": "spotlight",
           "openreviewUrl": "https://openreview.net/forum?id=Ro0eQ0ly3q",
-          "id": "vlaw-iterative-co-improvement-of-vision-language-action-policy-and-world-model"
+          "id": "vlaw"
         },
         {
           "sourceIndex": 20,
