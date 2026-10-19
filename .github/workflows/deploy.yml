@@ -36,6 +36,9 @@ jobs:
       - name: Validate the complete bilingual corpus
         run: npm run validate:corpus
 
+      - name: Build the production site
+        run: npm run build
+
       - name: Install Chromium for browser checks
         run: npx playwright install --with-deps chromium
 

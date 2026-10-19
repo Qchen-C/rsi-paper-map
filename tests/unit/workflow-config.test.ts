@@ -20,13 +20,17 @@ describe('GitHub Pages workflow', () => {
     const source = await readFile(workflowUrl, 'utf8');
     const testIndex = source.indexOf('npm run test:unit');
     const validationIndex = source.indexOf('npm run validate:corpus');
-    const buildIndex = source.indexOf('withastro/action@v6');
+    const buildIndex = source.indexOf('npm run build');
+    const browserIndex = source.indexOf('npm run test:e2e');
+    const artifactIndex = source.indexOf('withastro/action@v6');
     const deployIndex = source.indexOf('deploy:');
 
     assert.ok(testIndex > 0);
     assert.ok(validationIndex > testIndex);
     assert.ok(buildIndex > validationIndex);
-    assert.ok(deployIndex > buildIndex);
+    assert.ok(browserIndex > buildIndex);
+    assert.ok(artifactIndex > browserIndex);
+    assert.ok(deployIndex > artifactIndex);
     assert.match(source, /deploy:\s*\n\s*needs:\s*build/);
   });
 });
