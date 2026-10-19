@@ -46,7 +46,6 @@ const serializedPapers = JSON.stringify(papers).replace(/</g, '\\u003c');
       <button type="button" class="button-secondary" data-empty-clear>清除筛选 · Clear filters</button>
     </div>
     <script is:inline type="application/json" id="paper-index-data" set:html={serializedPapers}></script>
-  </main>
 <script>
   import { filterPapers, sortPapers } from '../../lib/filter-papers';
   import type { Difficulty, EvidenceStatus, PaperIndexItem, Presentation } from '../../lib/papers';
@@ -105,4 +104,5 @@ const serializedPapers = JSON.stringify(papers).replace(/</g, '\\u003c');
     applyFilters();
   }
 </script>
+  </main>
 </BaseLayout>
