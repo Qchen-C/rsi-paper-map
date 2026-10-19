@@ -3,9 +3,9 @@
   --paper: #f2efe6;
   --sheet: #fbf9f3;
   --ink: #17201d;
-  --muted: #626962;
+  --muted: #4e574f;
   --pine: #164438;
-  --signal: #d35324;
+  --signal: #a83e18;
   --signal-soft: #f2d6c7;
   --rule: #cec8ba;
   --serif: Charter, "Iowan Old Style", "Noto Serif SC", Georgia, serif;
@@ -281,7 +281,8 @@ button { font: inherit; }
 .read-toggle { display: flex; gap: .55rem; align-items: center; cursor: pointer; }
 .read-toggle input { accent-color: var(--signal); }
 .progress-range, .note-field { display: grid; gap: .55rem; margin-top: 1.2rem; color: var(--muted); font: 700 .7rem var(--sans); }
-.progress-range output { float: right; color: var(--signal); }
+.progress-range-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.progress-range output { color: var(--signal); }
 .progress-range input { width: 100%; accent-color: var(--signal); }
 .note-field textarea { width: 100%; resize: vertical; border: 1px solid var(--rule); border-radius: 0; padding: .7rem; color: var(--ink); background: var(--paper); font: .78rem/1.55 var(--sans); }
 .progress-footer { display: flex; align-items: center; justify-content: space-between; gap: .7rem; margin-top: .8rem; color: var(--muted); font: .6rem/1.4 var(--sans); }

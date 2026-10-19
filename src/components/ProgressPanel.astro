@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { paperId } = Astro.props;
+const progressId = `reading-progress-${paperId}`;
 ---
 
 <section class="progress-panel" data-progress-panel data-paper-id={paperId} aria-labelledby="progress-title">
@@ -18,10 +19,13 @@ const { paperId } = Astro.props;
     <label class="read-toggle"><input type="checkbox" data-read /> <span>标记已读 · Mark as read</span></label>
   </div>
 
-  <label class="progress-range">
-    <span>阅读进度 · Reading progress <output data-progress-output>0%</output></span>
-    <input type="range" min="0" max="100" step="1" value="0" data-progress />
-  </label>
+  <div class="progress-range">
+    <div class="progress-range-heading">
+      <label for={progressId}>阅读进度 · Reading progress</label>
+      <output for={progressId} data-progress-output>0%</output>
+    </div>
+    <input id={progressId} type="range" min="0" max="100" step="1" value="0" data-progress />
+  </div>
 
   <label class="note-field">
     <span>私人笔记 · Private notes</span>
