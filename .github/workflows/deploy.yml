@@ -43,7 +43,18 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Test the production build in a browser
-        run: npm run test:e2e
+        shell: bash
+        run: |
+          set +e
+          npm run test:e2e 2>&1 | tee playwright-output.log
+          test_status=${PIPESTATUS[0]}
+          {
+            echo "## Browser check output"
+            echo '```text'
+            tail -n 240 playwright-output.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit "$test_status"
 
       - name: Build and upload the Pages artifact
         uses: withastro/action@v6
