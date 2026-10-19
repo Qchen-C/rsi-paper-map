@@ -2,6 +2,12 @@ import { expect, test } from '@playwright/test';
 
 test.describe('paper library', () => {
   test.beforeEach(async ({ page }) => {
+    page.on('pageerror', (error) => {
+      console.error(`Browser page error: ${error.stack ?? error.message}`);
+    });
+    page.on('console', (message) => {
+      if (message.type() === 'error') console.error(`Browser console error: ${message.text()}`);
+    });
     await page.goto('/rsi-paper-map/papers');
   });
 
