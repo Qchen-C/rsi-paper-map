@@ -4,7 +4,7 @@ import FilterPanel from '../../components/FilterPanel.astro';
 import PaperCard from '../../components/PaperCard.astro';
 import { THEMES } from '../../data/themes';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { filterPapers, sortPapers } from '../../lib/filter-papers';
+import { sortPapers } from '../../lib/filter-papers';
 import { toPaperIndexItem } from '../../lib/papers';
 
 const paperEntries = await getCollection('papers');

@@ -2,5 +2,7 @@
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
     "allowImportingTsExtensions": true
-  }
+  },
+  "include": [".astro/types.d.ts", "src/**/*"],
+  "exclude": ["dist", "tests", "playwright.config.ts"]
 }

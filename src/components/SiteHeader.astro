@@ -61,7 +61,7 @@ const isHome = currentPath === homeHref || currentPath === `${homeHref}/`;
   document.querySelectorAll<HTMLButtonElement>('[data-language-switch]').forEach((button) => {
     button.addEventListener('click', () => {
       const current = (button.dataset.mode ?? 'bilingual') as typeof modes[number];
-      const next = modes[(modes.indexOf(current) + 1) % modes.length];
+      const next = modes[(modes.indexOf(current) + 1) % modes.length] ?? modes[0];
       saveLanguageMode(window.localStorage, next);
       applyLanguage(next);
     });
