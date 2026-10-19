@@ -50,6 +50,7 @@ const serializedPapers = JSON.stringify(papers).replace(/</g, '\\u003c');
   import { filterPapers, sortPapers } from '../../lib/filter-papers';
   import type { Difficulty, EvidenceStatus, PaperIndexItem, Presentation } from '../../lib/papers';
 
+  const initializePaperLibrary = () => {
   const form = document.querySelector<HTMLFormElement>('[data-filter-form]');
   const list = document.querySelector<HTMLElement>('[data-paper-list]');
   const status = document.querySelector<HTMLElement>('[data-result-status]');
@@ -102,6 +103,13 @@ const serializedPapers = JSON.stringify(papers).replace(/</g, '\\u003c');
     form.querySelector('[data-clear-filters]')?.addEventListener('click', clearFilters);
     empty.querySelector('[data-empty-clear]')?.addEventListener('click', clearFilters);
     applyFilters();
+  }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializePaperLibrary, { once: true });
+  } else {
+    initializePaperLibrary();
   }
 </script>
   </main>
