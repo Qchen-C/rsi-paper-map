@@ -9,6 +9,20 @@ test.describe('paper library', () => {
       if (message.type() === 'error') console.error(`Browser console error: ${message.text()}`);
     });
     await page.goto('/rsi-paper-map/papers');
+    const diagnostic = await page.evaluate(() => ({
+      readyState: document.readyState,
+      form: Boolean(document.querySelector('[data-filter-form]')),
+      list: Boolean(document.querySelector('[data-paper-list]')),
+      status: Boolean(document.querySelector('[data-result-status]')),
+      empty: Boolean(document.querySelector('[data-empty-results]')),
+      dataLength: document.querySelector('#paper-index-data')?.textContent?.length ?? -1,
+      scripts: [...document.scripts].map((script) => ({
+        type: script.type,
+        src: script.src,
+        text: script.textContent?.slice(0, 80) ?? '',
+      })),
+    }));
+    console.error(`Paper library hydration diagnostic: ${JSON.stringify(diagnostic)}`);
   });
 
   test('searches original English titles and Chinese content', async ({ page }) => {
