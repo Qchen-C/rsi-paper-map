@@ -17,11 +17,13 @@ describe('paper library source contract', () => {
   it('provides accessible search, grouped filters, live count, clear action, and empty state', async () => {
     const filters = await read('src/components/FilterPanel.astro');
     const page = await read('src/pages/papers/index.astro');
+    const styles = await read('src/styles/global.css');
     assert.match(filters, /type="search"/);
     assert.match(filters, /<fieldset/);
     assert.match(filters, /data-clear-filters/);
     assert.match(page, /aria-live="polite"/);
     assert.match(page, /data-empty-results/);
+    assert.match(styles, /\[hidden\]\s*{[^}]*display:\s*none\s*!important/);
   });
 
   it('keeps each original English title outside language-selective wrappers', async () => {
